@@ -1,0 +1,70 @@
+.site-footer {
+    padding: 25px;
+    width: 100vw;
+    box-sizing: border-box;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    /* border: 2px solid white; */
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    gap: 30px; /* Increase space between columns */
+    align-items: center;
+}
+.logo-column{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.footer-logo {
+    width: 100px; /* Ensure the logo scales nicely */
+    height: auto;
+}
+
+.footer-info {
+    max-width: 100%;
+}
+
+.footer-business-name {
+    
+    font-size: 18px !important;
+  letter-spacing:3px;
+    font-weight: 600;
+  text-transform:uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-business-address,
+.footer-business-phone {
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1.5;
+  letter-spacing:1px;
+}
+.third-column{
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.third-column p{
+    /* border: 2px solid white; */
+    margin-right: 10px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+        text-align: center;
+      transform:scale(0.90);
+    }
+
+    .footer-nav ul {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,85 @@
+.marginal {
+    width: 86%;
+    max-width: 1500px;
+    margin: auto;
+    padding: 2% 0;
+}
+
+/* Customizing the pagination dots */
+.custom-dots {
+    bottom: -10px !important;
+    /* Adjust the position */
+}
+
+.custom-dots2 {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%);
+    width: fit-content;
+}
+.custom-dots3 {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    width: fit-content;
+}
+
+.slick-dots2 {
+    right: -0px;
+    /* Adjust the position */
+}
+
+.custom-dot {
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-color: #ffff;
+    /* Customize the color */
+    border-radius: 50%;
+    border: 2px solid #10357E;
+    display: flex;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.custom-dot-inner {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background-color: transparent;
+    transition: transform 0.3s ease;
+
+}
+
+.custom-dot:hover {
+    transform: scale(1.2);
+    /* Add hover effect */
+}
+
+.slick-active .custom-dot-inner {
+    background-color: #FF6C13;
+}
+
+@media (max-width: 768px) {
+    .custom-dots2 {
+        bottom: -10px !important;
+        display: flex !important;
+        position: static;
+        width: fit-content;
+        margin: auto;
+    }
+    .custom-dots3 {
+        bottom: -10px !important;
+        display: flex !important;
+        position: static;
+        width: fit-content;
+        margin: auto;
+    }
+}
