@@ -12,6 +12,11 @@ import ManagingDirector from './Pages/ManagingDirector'
 import MarketOverview from './Pages/MarketOverview'
 import UnlockPage from './Pages/Unlock'
 import CorporateIdentity from './Pages/CorporateIdentity'
+import StrategicP from './Pages/StrategicP'
+import SuperiorP from './Pages/SuperiorP'
+import EnhancingV from './Pages/EnhancingV'
+import DigitalTrans from './Pages/DigitalTrans'
+import EMobilityTrans from './Pages/EMobilityTrans'
 
 function App() {
 
@@ -30,6 +35,11 @@ function App() {
   <Route path="/market-overview" element={<MarketOverview/>} />
   <Route path="/unlock-2.0" element={<UnlockPage/>} />
   <Route path="/corporate-identity" element={<CorporateIdentity/>} />
+  <Route path="/strategic-pathways-to-growth-opportunities" element={<StrategicP/>} />
+  <Route path="/superior-products-and-advanced-technology" element={<SuperiorP/>} />
+  <Route path="/enhancing-value" element={<EnhancingV/>} />
+  <Route path="/digital-transformation" element={<DigitalTrans/>} />
+  <Route path="/e-mobility-transformation" element={<EMobilityTrans/>} />
   </Routes>
   <Footer/>
   </BrowserRouter> 

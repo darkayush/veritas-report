@@ -6,10 +6,7 @@
 }
 
 /* Customizing the pagination dots */
-.custom-dots {
-    bottom: -10px !important;
-    /* Adjust the position */
-}
+
 
 .custom-dots2 {
     position: absolute;
@@ -29,13 +26,17 @@
     /* Adjust the position */
 }
 
+.custom-dots {
+    bottom: -10px !important;
+    /* Adjust the position */
+}
+
 .custom-dot {
     margin-bottom: 5px;
     width: 20px;
     height: 20px;
     margin-right: 5px;
     background-color: #ffff;
-    /* Customize the color */
     border-radius: 50%;
     border: 2px solid #10357E;
     display: flex;

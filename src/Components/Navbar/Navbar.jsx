@@ -122,19 +122,19 @@ const Navbar = () => {
                       <h4 className="title">Accelerate</h4>
                       <ul>
                         <li><Link to="/market-overview">Market Overview</Link></li>
-                        <li><Link to="#">Strategic Pathways to Growth Opportunities</Link></li>
+                        <li><Link to="/strategic-pathways-to-growth-opportunities">Strategic Pathways to Growth Opportunities</Link></li>
                       </ul>
                     </div>
                     <div className="list-item">
                       <h4 className="title">Premiumize</h4>
                       <ul>
-                        <li><Link to="#">Superior Products and Advanced Technology</Link></li>
-                        <li><Link to="#">Enhancing Value: Future-focused Product Innovations</Link></li>
+                        <li><Link to="/superior-products-and-advanced-technology">Superior Products and Advanced Technology</Link></li>
+                        <li><Link to="/enhancing-value">Enhancing Value: Future-focused Product Innovations</Link></li>
                       </ul>
                       <h4 className="title">Transform</h4>
                       <ul>
-                        <li><Link to="#">Digital Transformation</Link></li>
-                        <li><Link to="#">e-Mobility Transformation</Link></li>
+                        <li><Link to="/digital-transformation">Digital Transformation</Link></li>
+                        <li><Link to="/e-mobility-transformation">e-Mobility Transformation</Link></li>
                         <li><Link to="#">Marketing Initiatives</Link></li>
                       </ul>
                     </div>
