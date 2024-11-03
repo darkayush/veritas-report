@@ -135,20 +135,20 @@ const Navbar = () => {
                       <ul>
                         <li><Link to="/digital-transformation">Digital Transformation</Link></li>
                         <li><Link to="/e-mobility-transformation">e-Mobility Transformation</Link></li>
-                        <li><Link to="#">Marketing Initiatives</Link></li>
+                        <li><Link to="/marketing-initiatives">Marketing Initiatives</Link></li>
                       </ul>
                     </div>
                     <div className="list-item">
                       <h4 className="title">Creating Shared Value for our Stakeholders</h4>
                       <ul>
-                        <li><Link to="#">Customers</Link></li>
-                        <li><Link to="#">Our People</Link></li>
-                        <li><Link to="#">Communities</Link></li>
-                        <li><Link to="#">Sustainability</Link></li>
-                        <li><Link to="#">Strategic Partnerships</Link></li>
-                        <li><Link to="#">Board of Directors</Link></li>
-                        <li><Link to="#">Leadership Team</Link></li>
-                        <li><Link to="#">Awards and Recognition</Link></li>
+                        <li><Link to="/customers">Customers</Link></li>
+                        <li><Link to="/our-people">Our People</Link></li>
+                        <li><Link to="/communities">Communities</Link></li>
+                        <li><Link to="/sustainability">Sustainability</Link></li>
+                        <li><Link to="/strategic-partnerships">Strategic Partnerships</Link></li>
+                        <li><Link to="/board-of-directors">Board of Directors</Link></li>
+                        <li><Link to="/leadership-team">Leadership Team</Link></li>
+                        <li><Link to="/awards-and-recognition">Awards and Recognition</Link></li>
                       </ul>
                     </div>
                     <div className="list-item">
