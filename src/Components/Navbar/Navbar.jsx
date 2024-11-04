@@ -163,10 +163,10 @@ const Navbar = () => {
                   <Link to="#">Statutory Reports <FontAwesomeIcon icon={faAngleDown} /></Link>
                   <div className="sub-menu single-column-menu">
                     <ul>
-                      <li><Link to="#">Management Discussion and Analysis</Link></li>
-                      <li><Link to="#">Board’s Report</Link></li>
-                      <li><Link to="#">Corporate Governance Report</Link></li>
-                      <li><Link to="#">Business Responsibility & Sustainability Report</Link></li>
+                      <li><Link to="./docs/MDA.pdf" target="_blank">Management Discussion and Analysis</Link></li>
+                      <li><Link to="./docs/BR.pdf" target="_blank">Board’s Report</Link></li>
+                      <li><Link to="./docs/CG.pdf" target="_blank">Corporate Governance Report</Link></li>
+                      <li><Link to="./docs/BRSR.pdf" target="_blank">Business Responsibility & Sustainability Report</Link></li>
                     </ul>
                   </div>
                 </li>
@@ -174,9 +174,9 @@ const Navbar = () => {
                   <Link to="#">Financial Statements <FontAwesomeIcon icon={faAngleDown} /></Link>
                   <div className="sub-menu single-column-menu">
                     <ul>
-                      <li><Link to="#">Standalone</Link></li>
-                      <li><Link to="#">Consolidated</Link></li>
-                      <li><Link to="#">Notice of the 16  Annual General Meeting</Link></li>
+                      <li><Link to="./docs/Standalone.pdf" target="_blank">Standalone</Link></li>
+                      <li><Link to="./docs/Consolidated.pdf" target="_blank">Consolidated</Link></li>
+                      <li><Link to="./docs/Notice.pdf" target="_blank">Notice of the 16  Annual General Meeting</Link></li>
                     </ul>
                   </div>
                 </li>
@@ -186,7 +186,7 @@ const Navbar = () => {
           </div>
           {/* Menu End */}
           <div className="header-item item-right">
-            <Link to="#"><img src="./home/pdf.png" alt="" className="w-[50px]" /></Link>
+            <Link to="./docs/Gulf india AR 2023-24.pdf" target="_blank"><img src="./home/pdf.png" alt="" className="w-[50px]" /></Link>
             {/* <Link to="#"><FontAwesomeIcon icon={faSearch} /></Link>
             <Link to="#"><FontAwesomeIcon icon={faHeart} /></Link>
             <Link to="#"><FontAwesomeIcon icon={faShoppingCart} /></Link> */}

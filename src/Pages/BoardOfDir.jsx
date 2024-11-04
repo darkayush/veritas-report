@@ -12,26 +12,26 @@ const BoardOfDir = () => {
             </h1>
             <p className='text-center text-xl'>Our esteemed Board of Directors at Gulf Oil provides strategic guidance, driving our corporate vision, governance excellence, and continued success for all our key imperatives.</p>
             <div className='my-4 md:flex flex-wrap md:justify-between'>
-                <div className='w-[25%]'>
+                <div className='md:w-[25%]'>
                     <img src="./other/b1.webp" alt="" />
                 </div>
-                <div className='w-[25%]'>
+                <div className='md:w-[25%]'>
                     <img src="./other/b2.webp" alt="" />
                 </div>
-                <div className='w-[25%]'>
+                <div className='md:w-[25%]'>
                     <img src="./other/b3.webp" alt="" />
                 </div>
             </div>
             <img src="./other/kp1.png" className='md:w-[35%]' alt="" />
 
             <div className='my-4 md:flex flex-wrap md:justify-between'>
-                <div className='w-[25%]'>
+                <div className='md:w-[25%]'>
                     <img src="./other/b4.webp" alt="" />
                 </div>
-                <div className='w-[25%]'>
+                <div className='md:w-[25%]'>
                     <img src="./other/b5.webp" alt="" />
                 </div>
-                <div className='w-[25%]'>
+                <div className='md:w-[25%]'>
                     <img src="./other/b6.webp" alt="" />
                 </div>
                 </div>
