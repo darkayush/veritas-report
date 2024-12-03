@@ -1,0 +1,13 @@
+static_site:
+  name: your-site-name
+  build_command: npm run build
+  publish_directory: dist
+  headers:
+    - name: Content-Security-Policy
+      value: "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
+    - name: X-Frame-Options
+      value: "SAMEORIGIN"
+    - name: Referrer-Policy
+      value: "no-referrer"
+    - name: Permissions-Policy
+      value: "geolocation=(), microphone=(), camera=()"
