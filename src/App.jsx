@@ -27,6 +27,7 @@ import StrategicPart from './Pages/StrategicPart'
 import BoardOfDir from './Pages/BoardOfDir'
 import LeadershipTeam from './Pages/LeadershipTeam'
 import Awards from './Pages/Awards'
+import TimelineCarousel from './Components/Timeline/TimelineCarousel'
 
 function App() {
 

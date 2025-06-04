@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="row v-center">
           <div className="header-item item-left">
             <div className="logo">
-              <Link to="/"><img src="./home/gulf-logo.svg" alt="" /></Link>
+              <Link to="/"><img src="./home/v_logo.png " alt="companylogo"/></Link>
             </div>
           </div>
           {/* Menu Start */}
@@ -110,7 +110,7 @@ const Navbar = () => {
                     <div className="list-item">
                       {/* <h4 className="title">Men's Fashion</h4> */}
                       <ul>
-                        <li><Link to="/at-a-glance">Gulf Oil India at a Glance</Link></li>
+                        <li><Link to="/at-a-glance">More About Veritas</Link></li>
                         <li><Link to="/unlock-2.0">Unlock 2.0</Link></li>
                         <li><Link to="/hinduja-group">Hinduja Group</Link></li>
                         <li><Link to="/gulf-oil-international">Gulf Oil International</Link></li>
@@ -186,7 +186,7 @@ const Navbar = () => {
           </div>
           {/* Menu End */}
           <div className="header-item item-right">
-            <Link to="./docs/Gulf india AR 2023-24.pdf" target="_blank"><img src="./home/pdf.png" alt="" className="w-[50px]" /></Link>
+            <Link to="./docs/Veritas Finance Private Limited AR 2024-25.pdf" target="_blank"><img src="./home/pdf.png" alt="" className="w-[50px]" /></Link>
             {/* <Link to="#"><FontAwesomeIcon icon={faSearch} /></Link>
             <Link to="#"><FontAwesomeIcon icon={faHeart} /></Link>
             <Link to="#"><FontAwesomeIcon icon={faShoppingCart} /></Link> */}

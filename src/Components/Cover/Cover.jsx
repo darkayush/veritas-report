@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const Cover = () => {
+function Cover() {
   return (
-    <div>
-      {/* <img src="./public/home/demo-cov.webp" alt="" /> */}
-      <video autoPlay muted loop
-          style={{width:"100%",
-          }}
-        >
-            <source src='./home/Gulf (1).webm' />
-        </video>
+    <div className="w-full md:h-screen overflow-hidden">
+      <video
+        src="/home/Veritas_Cover.mp4"
+        autoPlay
+        muted
+        playsInline
+        className="w-full  object-contain"
+      ></video>
     </div>
-  )
+  );
 }
 
-export default Cover
+export default Cover;

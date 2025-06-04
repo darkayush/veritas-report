@@ -4,84 +4,10 @@ import "slick-carousel/slick/slick.css";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick-theme.css";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+
 const About = () => {
-    const data = [
-        {
-            img: "/home/s1.svg",
-            title: "~11,500+",
-            text: "Bike and Car Stops Pan India",
-        },
-        {
-            img: "/home/s2.svg",
-            title: "85,000+ ",
-            text: "Touchpoints",
-        },
-        {
-            img: "/home/s3.svg",
-            title: "30+",
-            text: "2 Central Distribution \nCentres and 30 Depots",
-        },
-        {
-            img: "/home/s4.svg",
-            title: "800+",
-            text: "Infra-mining Fleet Customers",
-        },
-        {
-            img: "/home/s5.svg",
-            title: "12,500+",
-            text: "Battery Sales and \nServicing Touchpoints",
-        },
-        {
-            img: "/home/s6.svg",
-            title: "500+",
-            text: "B2B Customers",
-        },
-        {
-            img: "/home/s7.svg",
-            title: "1,40,000 KL",
-            text: "Total lubricants \nmanufacturing capacity of \nour two plants (per annum) \n- on 2 shift basis",
-        },
-        {
-            img: "/home/s8.svg",
-            title: "2,75,000+ KL",
-            text: "Combined AdBlue® \nmanufacturing capacity of \ntwo in-house plants and 13 \nexternal satellite plants",
-        },
-        {
-            img: "/home/s9.svg",
-            title: "25+",
-            text: "Countries - Export",
-        },
-        {
-            img: "",
-            title: "₹3,284 Cr",
-            text: "Operational Revenue (10%)",
-        },
-        {
-            img: "",
-            title: "₹419 Cr",
-            text: "EBITDA (22%)",
-        },
-        {
-            img: "",
-            title: "142,000 KL",
-            text: "Core Lubricants Sales \nVolume ( 4%) ( 6% without \nfactory fill)",
-        },
-        {
-            img: "",
-            title: "₹308 Cr",
-            text: "PAT (32%)",
-        },
-        {
-            img: "",
-            title: "₹1,295 Cr",
-            text: "Net Worth ",
-        },
-        {
-            img: "",
-            title: "₹4,618 Cr",
-            text: "Market Capitalisation \n(As on March 31, 2024)",
-        },
-    ]
+    const navigate = useNavigate();
     const { scrollYProgress } = useScroll();
     const settings = {
         dots: true,
@@ -111,150 +37,70 @@ const About = () => {
     };
 
     const x = useTransform(scrollYProgress, [0, 1], ['140%', '-700%']);
+    const scaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
-        <div>
-            <div className='md:flex md:justify-center md:items-center md:p-0 p-4'>
-                <div className='md:w-[49%]'>
-                    <div className='md:w-[65%]  md:m-auto'>
-                        <div className='mb-5'>
-                            <h1 className='w-fit bg-gradient-to-r from-[#FF6C13] to-[#266EFE] text-transparent bg-clip-text m-auto md:m-0 text-5xl md:text-7xl font-semibold'>
-                                Gulf Oil India
-                            </h1>
-                            <h1 className='w-fit bg-gradient-to-r from-[#FF6C13] to-[#266EFE] text-transparent bg-clip-text m-auto md:m-0 text-5xl md:text-7xl font-semibold'>
-                                at a Glance
-                            </h1>
-                        </div>
-                        <div className='md:flex flex-wrap md:items-center md:justify-between'>
-                            <div className='flex items-center gap-2 my-5 w-fit m-auto md:w-auto md:mx-0'>
-                                <div className='w-[70px]'>
-                                    <img src="./home/gulf-logo.svg" alt="" />
-                                </div>
-                                <div >
-                                    <h2 className='text-3xl text-[#ff6319] pb-2'>120+ years</h2>
-                                    <p className='text-base font-light border-t-[1px] border-black pt-1 text-regular'><span className='border-t-[4px] border-[#10357e] pt-1'>of G</span>lobal Brand History</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center gap-2 my-5 w-fit m-auto md:w-auto md:mx-0'>
-                                <div className='w-[60px]'>
-                                    <img src="./home/Employees 1.svg" alt="" />
-                                </div>
-                                <div >
-                                    <h2 className='text-3xl text-[#ff6319] pb-2'>591</h2>
-                                    <p className='text-base font-light border-t-[1px] border-black pt-1 text-regular'><span className='border-t-[4px] border-[#10357e] pt-1'>Emp</span>loyees</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center gap-2 my-5 w-fit m-auto md:w-auto md:mx-0'>
-                                <div className='w-[60px]'>
-                                    <img src="./home/Partner 1.svg" alt="" />
-                                </div>
-                                <div >
-                                    <h2 className='text-3xl text-[#ff6319] pb-2'>40%</h2>
-                                    <p className='text-base font-light border-t-[1px] border-black pt-1 text-regular'><span className='border-t-[4px] border-[#10357e] pt-1'>OEM</span> Partnership</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='md:w-[49%] relative'>
-                    <img src="./home/bg-rays.svg" alt="" />
-                    <img src="./home/msd.png" className='absolute bottom-[0%] left-[42.5%] translate-x-[-50%] w-[78%]' alt="" />
-                </div>
-            </div>
+        <div className="relative">
+            {/* Scroll-based progress bar */}
+            <motion.div
+                className="fixed top-0 left-0 h-2 w-full bg-gradient-to-r from-[#c9243f] to-[#f6a11d] z-[100]"
+                style={{ scaleX, transformOrigin: "left" }}
+            />
 
-            <div className="wave-container mt-[70px] mb-5">
-                <h1 className='w-fit bg-gradient-to-r from-[#FF6C13] to-[#266EFE] text-transparent bg-clip-text pt-10 pb-2 mx-auto mt-5 text-3xl md:text-6xl font-semibold'>
-                    Amongst ‘Top 3 in India’
-                </h1>
-                <div className='marginal md:flex md:justify-center mt-5 md:items-center text-center'>
-                    <div className='md:w-[20%] mb-4 h-[200px]'>
-                        <div className='w-[70px] mx-auto mb-3 '>
-                            <img src="./home/Lubricants 1.svg" className='w-full' alt="" />
-                        </div>
-                        <p>
-                            Lubricants Brand in India <br /> (As per a Survey <br /> Commissioned by Kantar <br /> IMRB)
-                        </p>
-                    </div>
-                    <div className='md:w-[20%] mb-4 h-[200px]'>
-                        <div className='w-[70px] mx-auto mb-3'>
-                            <img src="./home/Lubricant-industry 1.svg" className='w-full' alt="" />
-                        </div>
-                        <p>
-                            Player among private sector in <br /> the Indian Lubricant industry <br />(Automotive and Industrial <br /> segments)
-                        </p>
-                    </div>
-                    <div className='md:w-[20%] mb-4 h-[200px]'>
-                        <div className='w-[70px] mx-auto mb-3'>
-                            <img src="./home/Distribution-reach 1.svg" className='w-full' alt="" />
-                        </div>
-                        <p>
-                            Company in Distribution <br /> Reach
-                        </p>
-                    </div>
-                </div>
-                <div className='w-full md:relative h-fit'>
-                    <img src="./home/road.svg" className='w-full' alt="" />
-                    <motion.img
-                        src="./home/Car 1.png"
-                        className='absolute w-[150px] bottom-[1%] md:w-auto md:top-[0%] right-10'
-                        alt="Car"
-                        style={{ x }} // Apply horizontal movement to the car
+            {/* Company Overview Section Header */}
+            {/* <div className="h-1 mt-10 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] relative"> 
+                <div className="bg-[#c9243f] absolute top-1/2 transform -translate-y-1/2 left-4 sm:left-12 h-5 w-5 rounded-full"></div> 
+                <div className="bg-[#c9243f] absolute top-1/2 transform -translate-y-1/2 left-12 sm:left-20 px-4 py-2 rounded-full"> 
+                    <h1 className="text-white font-bold text-xl sm:text-2xl"> 
+                        Company Overview 
+                    </h1> 
+                </div> 
+            </div>  */}
+
+            {/* Main About Section */}
+            <div className="relative mt-10 w-full h-auto">
+                {/* Background Image */}
+                <div className="relative w-full h-[110vh] sm:h-[90vh] overflow-hidden"
+                    style={{
+                        WebkitMaskImage:
+                            "linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%)",
+                        maskImage:
+                            "linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%)",
+                    }}
+                >
+                    {/* Background Image */}
+                    <img
+                        src="/home/about_us_img.png"
+                        alt="About Us"
+                        className="w-full h-full object-cover"
                     />
-                </div>
-            </div>
-            <div className='marginal'>
-                <Slider {...settings}>
-                    {data.map((item, index) => (
-                        <div
-                            key={index}
-                            className="!flex items-center my-5 w-fit h-[250px] m-auto md:w-fit md:mx-0 "
-                        >
-                            {/* Image Box */}
-                            <div className="w-[80px] h-full flex items-center justify-center">
-                                {item.img && (
-                                    <img src={item.img} alt={`Slide ${index + 1}`} className="w-[70px] object-contain" />
-                                )}
-                            </div>
 
-                            {/* Content Box */}
-                            <div className="w-fit p-4">
-                                <h3 className="text-3xl font-semibold text-[#ff6319] pb-2">{item.title}</h3>
-                                <p className="whitespace-pre text-xl font-light border-t-[1px] border-black pt-1">{item.text}</p>
-                            </div>
-                        </div>
-                    ))}
-                </Slider>
-            </div>
-            <div className=''>
-                <div className='my-5 md:flex md:justify-between marginal '>
-                    <div className='md:w-[24%] z-[1]'>
-                        <h4 className='text-[#FF6C13] mb-1 w-fit m-auto text-xl font-semibold'>Quarter 1</h4>
-                        <img src="./home/q1.png" className='m-auto' alt="" />
-                    </div>
-                    <div className='md:w-[24%] z-[1]'>
-                        <h4 className='text-[#FF6C13] mb-1 w-fit m-auto text-xl font-semibold'>Quarter 2</h4>
-                        <img src="./home/q2.png" className='m-auto' alt="" />
-                    </div>
-                    <div className='md:w-[24%] z-[1]'>
-                        <h4 className='text-[#FF6C13] mb-1 w-fit m-auto text-xl font-semibold'>Quarter 3</h4>
-                        <img src="./home/q3.png" className='m-auto' alt="" />
-                    </div>
-                    <div className='md:w-[24%] z-[1]'>
-                        <h4 className='text-[#FF6C13] mb-1 w-fit m-auto text-xl font-semibold'>Quarter 4</h4>
-                        <img src="./home/q4.png" className='m-auto' alt="" />
-                    </div>
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60 z-10"></div>
                 </div>
-                <div className="oil-container  z-[-1] bottom-[-70%]">
-                    <video autoPlay muted loop
-                    className='md:mt-[-100px]'
-                        style={{
-                            width: "100%",
-                            opacity: 0.7,
-                            zIndex: -1
-                        }}
-                    >
-                        <source src="./home/olive-oil-pours-in-a-stream-with-splashes-2023-11-27-04-59-07-utc_1.webm" />
-                    </video>
+
+
+                {/* Text Content */}
+                <div className="absolute inset-0 z-20 flex flex-col justify-center px-6 sm:px-20 py-12">
+                    <h1 className="font-extrabold text-2xl sm:text-4xl text-[#c0bbb8] mb-4 pb-10">
+                        About Veritas
+                    </h1>
+
+                    <h2 className="font-extrabold text-3xl sm:text-6xl mb-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
+                        Enabling financial
+                    </h2>
+                    <h2 className="font-extrabold text-3xl sm:text-6xl mb-6 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit">
+                        empowerment for decades
+                    </h2>
+                    <div>
+                        <button
+                            onClick={() => navigate('/at-a-glance')}
+                            className="px-8 py-3 text-sm sm:text-base font-bold uppercase tracking-wide text-black bg-white border border-gray-300 rounded-full shadow-lg transition duration-300 hover:bg-gradient-to-r from-[#c9243f] to-[#f6a11d] hover:text-white hover:-translate-y-1
+                            mt-10"
+                        >
+                            Know More
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

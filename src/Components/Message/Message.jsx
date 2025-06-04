@@ -31,12 +31,12 @@ const Message = () => {
     };
     return (
         <div className='marginal'>
-            <h1 className='w-fit bg-gradient-to-r from-[#FF6C13] to-[#266EFE] text-transparent bg-clip-text pt-10 pb-2 mx-auto mt-5 text-3xl md:text-6xl font-semibold'>
+            <h1 className='w-fit bg-gradient-to-r from-[#c9243f] to-[#f6a11d] text-transparent bg-clip-text pt-10 pb-2 mx-auto mt-5 text-3xl md:text-6xl font-semibold'>
                 Management's Message
             </h1>
-            <h1 className='w-fit mx-auto mt-5 text-[#D9D9D9] text-2xl md:text-4xl font-semibold'>
+            {/* <h1 className='w-fit mx-auto mt-5 text-[#D9D9D9] text-2xl md:text-4xl font-semibold'>
                 Crafting Sustainable Momentum
-            </h1>
+            </h1> */}
 
             <Slider {...settings}>
                 <div className='md:!flex justify-start items-center my-5' >
@@ -45,9 +45,22 @@ const Message = () => {
                     </div>
                     <div className='md:w-[56%]'>
                         <p className='md:text-xl md:w-[95%]'>
-                            In FY 2023-24, Gulf Oil has accomplished significant growth, setting high standards for the industry as a whole in a volatile market landscape. We have recorded the highest-ever annual revenue and profit for FY 2023-24. Drawing confidence from our overall performance and cash flow generation, the board has declared a total record dividend ever for fiscal year 2024 at H36.00 per equity share.
+                            At Veritas, we are building for
+                            the long term. Our strategic
+                            priorities are anchored in
+                            the balance between scale
+                            and control, growth and
+                            governance and innovation
+                            and stability. We are focused
+                            on broadening our product
+                            portfolio, deepening our
+                            distribution reach and
+                            strengthening our institutional
+                            capabilities in a way that
+                            allows us to stay agile in a
+                            dynamic environment.
                         </p>
-                        <p className='mt-4 text-2xl text-[#F26323]'>Sanjay G. Hinduja</p>
+                        <p className='mt-4 text-2xl w-fit bg-gradient-to-r from-[#c9243f] to-[#f6a11d] text-transparent bg-clip-text'>Raj Vikash Verma</p>
                         <p>Chairman</p>
                     </div>
                 </div>
@@ -57,19 +70,19 @@ const Message = () => {
                     </div>
                     <div className='md:w-[56%]'>
                         <p className='md:text-xl md:w-[95%]'>
-                            Notwithstanding several
-                            challenges, we have
-                            maintained our growth
-                            momentum and have been growing 2-3x of the industry
-                            volume growth rate over
-                            the last decade. We take
-                            pride in being positioned
-                            as a leading brand in India
-                            and strongly believe it is
-                            now time for us to unlock the next level of growth and
-                            value creation in an ever- evolving industry landscape.
+                            Veritas Finance delivered
+                            a strong and broad-based
+                            performance across key
+                            operational and financial
+                            indicators. Our Assets
+                            Under Management
+                            (AUM) grew by 28.39% to
+                            INR 7,349 crore, driven by
+                            disbursements of 3,933
+                            crore, a 6.23% increase
+                            from the previous year.
                         </p>
-                        <p className='mt-4 text-2xl text-[#F26323]'>Ravi Chawla</p>
+                        <p className='mt-4 text-2xl w-fit bg-gradient-to-r from-[#c9243f] to-[#f6a11d] text-transparent bg-clip-text'>D. Arulmany</p>
                         <p>MD & CEO</p>
                     </div>
                 </div>

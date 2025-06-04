@@ -13,7 +13,7 @@ const BodSlider = () => {
             </div>
         );
     },
-    dotsClass: "slick-dots custom-dots",
+    dotsClass: "slick-dots custom-dots",    
     infinite: true,
     speed: 700,
     slidesToShow: 3,
@@ -32,15 +32,14 @@ const BodSlider = () => {
 };
   return (
     <div className='marginal'>
-        <h1 className='w-fit bg-gradient-to-r from-[#FF6C13] to-[#266EFE] text-transparent bg-clip-text pt-10 pb-2 mx-auto mt-5 text-3xl md:text-6xl font-semibold'>
-        Board of Directors
-            </h1>
-            <h1 className='w-fit mx-auto mt-5 text-[#D9D9D9] text-2xl md:text-4xl font-semibold'>
-            Fostering Shared Success
-            </h1>
-            <p className=' md:w-[50%] m-auto text-center my-5'>
-            Our esteemed Board of Directors at Gulf Oil provides strategic guidance, driving our corporate vision, governance excellence, and continued success for all our key imperatives.
-            </p>
+        <div className="inset-0 z-20 flex flex-col justify-center px-6 sm:px-20 py-12">
+          <h1 className="font-extrabold text-2xl sm:text-4xl text-[#11111] mb-4">
+          Board of Directors
+          </h1>
+          <h2 className="font-extrabold text-3xl sm:text-6xl mb-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
+          Leading with experience and expertise
+          </h2>
+        </div>
             <Slider {...settings}>
                 <div className='my-5'>
                     <img src="./home/bod1.png" className='w-[90%] m-auto' alt="" />
