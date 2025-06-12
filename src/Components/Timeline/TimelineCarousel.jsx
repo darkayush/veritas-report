@@ -5,18 +5,43 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const timelineData = [
-  { year: "2015", description: ["Incorporated as Veritas Finance Private Limited and registered as an NBFC with the RBI.","Commenced operations in Tamil Nadu through offices in Coimbatore and Trichy."] },
-  { year: "2016", description: ["Expanded to the Union Territory of Puducherry.","Secured first private equity from Sarva Capital LLC and Caspian Impact Investment Adviser."] },
-  { year: "2017", description: ["Entered West Bengal, Odisha and Karnataka.","Loan disbursements surpassed INR 100 Crores for the year.","Raised equity from British InternationalInvestments plc (CDC), Lok Capital and Sarva Capital.","Received CARE BBB- rating for long-term banking facilities."] },
-  { year: "2018", description: ["Achieved cumulative break-even.","Crossed 100 branches and expanded into Telangana Andhra Pradesh and Madhya Pradesh.","Raised equity from Norwest Venture Partners and British International Investments.","Received CARE BBB+ rating for long-term banking facilities."] },
-  { year: "2019", description: ["Entered Jharkhand.","Loan book crossed INR 1,000 Crores."] },
+  { year: "2015", description: ["Incorporated as Veritas Finance Private Limited and registered as an NBFC with the RBI.", "Commenced operations in Tamil Nadu through offices in Coimbatore and Trichy."] },
+  { year: "2016", description: ["Expanded to the Union Territory of Puducherry.", "Secured first private equity from Sarva Capital LLC and Caspian Impact Investment Adviser."] },
+  { year: "2017", description: ["Entered West Bengal, Odisha and Karnataka.", "Loan disbursements surpassed INR 100 Crores for the year.", "Raised equity from British InternationalInvestments plc (CDC), Lok Capital and Sarva Capital.", "Received CARE BBB- rating for long-term banking facilities."] },
+  { year: "2018", description: ["Achieved cumulative break-even.", "Crossed 100 branches and expanded into Telangana Andhra Pradesh and Madhya Pradesh.", "Raised equity from Norwest Venture Partners and British International Investments.", "Received CARE BBB+ rating for long-term banking facilities."] },
+  { year: "2019", description: ["Entered Jharkhand.", "Loan book crossed INR 1,000 Crores."] },
   { year: "2020", description: ["Raised equity from Kedaara Capital, Norwest and Lok Capital.", "Received CARE A- rating for long-term banking facilities."] },
   { year: "2021", description: ["Raised equity from a consortium of marquee investors including Norwest, Kedaara, Growth Catalyst and Evolvence."] },
   { year: "2022", description: ["Customer base crossed 100,000; branch network reached 250+.", "Received CARE A1+ short-term credit rating for Commercial Paper."] },
-  { year: "2023", description: ["Commenced operations in Bihar and Chhattisgarh.", "Received CARE A+ for long-term and A1+ for short-term banking facilities.","Raised funds from Multiples Private Equity Fund III and Avendus Future Leaders Fund II.","Loan book crossed INR 5,000 Crores."] },
-  { year: "2024", description: ["Crossed 400 branches.", "Launched vehicle loans.","Long-term CARE A+ outlook revised to ‘Positive’."] },
+  { year: "2023", description: ["Commenced operations in Bihar and Chhattisgarh.", "Received CARE A+ for long-term and A1+ for short-term banking facilities.", "Raised funds from Multiples Private Equity Fund III and Avendus Future Leaders Fund II.", "Loan book crossed INR 5,000 Crores."] },
+  { year: "2024", description: ["Crossed 400 branches.", "Launched vehicle loans.", "Long-term CARE A+ outlook revised to ‘Positive’."] },
   { year: "2025", description: ["Loan book crossed INR 7,000 Crores."] }
 ];
+
+// 👇 Custom Arrows
+const CustomPrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="absolute left-3 sm:left-6 top-1/2 transform -translate-y-1/2 z-50 text-4xl text-black cursor-pointer"
+      onClick={onClick}
+    >
+      ‹
+    </div>
+  );
+};
+
+const CustomNextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="absolute right-3 sm:right-6 top-1/2 transform -translate-y-1/2 z-50 text-4xl text-black cursor-pointer"
+      onClick={onClick}
+    >
+      ›
+    </div>
+  );
+};
 
 const TimelineCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,29 +55,33 @@ const TimelineCarousel = () => {
     autoplay: true,
     autoplaySpeed: 2500,
     beforeChange: (current, next) => setActiveIndex(next),
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div className="relative w-full py-10 px-4 bg-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/home/glorybg.png')] bg-cover bg-center z-0"
+      <div
+        className="absolute inset-0 bg-[url('/home/glorybg.png')] bg-cover bg-center z-0"
         style={{
           WebkitMaskImage: "linear-gradient(to top, black 90%, transparent 100%)",
-          maskImage: "linear-gradient(to top, black 10%, transparent 100%)"
-        }}></div>
+          maskImage: "linear-gradient(to top, black 10%, transparent 100%)",
+        }}
+      ></div>
 
       <div className="relative z-10">
         <div className="inset-0 z-20 flex flex-col justify-center px-6 sm:px-20 py-12">
@@ -70,11 +99,7 @@ const TimelineCarousel = () => {
           </p>
         </div>
 
-        <div className="w-full py-10 px-4"
-          style={{
-            WebkitMaskImage: "linear-gradient(to top, black 90%, transparent 100%)",
-            maskImage: "linear-gradient(to top, black 10%, transparent 100%)"
-          }}>
+        <div>
           <Slider {...settings}>
             {timelineData.map((item, index) => {
               const isActive = activeIndex === index;
@@ -84,7 +109,7 @@ const TimelineCarousel = () => {
                     className={`relative flex flex-col items-center justify-center transition-all duration-500 ${isActive ? "scale-110 z-20" : "scale-90 blur-sm opacity-70"}`}
                   >
                     <div className="relative pt-10 pb-10">
-                      <div className="w-36 z-10 h-36 rounded-full bg-gradient-to-l from-[#c9243f] to-[#f6a11d] flex items-end justify-center text-white text-5xl font-bold relative shadow-xl">
+                      <div className="w-36 z-10 h-36 rounded-full bg-gradient-to-l from-[#c9243f] to-[#f6a11d] flex items-center justify-center text-white text-5xl font-bold relative shadow-xl">
                         {item.year}
                       </div>
                     </div>
@@ -104,9 +129,6 @@ const TimelineCarousel = () => {
                 transition={{ duration: 0.5 }}
                 className="absolute w-full max-w-xl p-6 rounded-xl bg-white text-black shadow-xl"
               >
-                <h3 className="text-xl font-semibold mb-2">
-                  {/* {timelineData[activeIndex].year} */}
-                </h3>
                 <ul className="list-disc ml-5 space-y-1 text-black">
                   {timelineData[activeIndex].description.map((point, i) => (
                     <li key={i}>{point}</li>
