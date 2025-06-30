@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="footer-content">
                 {/* Logo Column */}
                 <div className="logo-column">
-                    <a href="">
+                    <a href="https://www.veritasfin.in/" target='_blank'>
                     <img className='footer-logo' src="./home/v_logo.png" alt="" />
                     </a>
                 </div>
@@ -24,7 +24,7 @@ const Footer = () => {
                     <p className="footer-business-address text-black">
                     Developed By: 
                     </p>
-                    <a href="https://kalolwala.com" target='_blank'><img className='w-[40px]' src="./home/k&a logo.svg" alt="" /></a>
+                    <a href="https://kalolwala.com" target='_blank'><img className='w-[40px]' src="/home/k&a logo.svg" alt="" /></a>
                 </div>
             </div>
         </footer>

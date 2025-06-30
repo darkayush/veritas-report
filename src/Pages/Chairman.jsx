@@ -1,191 +1,224 @@
 const Chairman = () => {
   return (
     <div className="marginal">
-      <h1 className="text-[#f26724] font-semibold text-center md:text-5xl text-3xl pt-4">
-        Chairman’s Message
+       <div className='md:!flex justify-start items-center my-5'>
+                    <div className="md:w-[30%] relative">
+                        <div className="bg-white rounded-t-xl overflow-hidden pr-4 pt-2 bg-gradient-to-tl from-gray-300 to-transparent">
+                            <img src="/home/Raj.webp" alt="Raj" className="w-full" />
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[4px] bg-gradient-to-r from-[#c9243f] to-[#f6a11d] rounded-b-xl"></div>
+                    </div>
+                    <div className='md:w-[70%] pl-10'>
+                        <p className='md:text-xl md:w-[95%]'>
+                            "At Veritas, we are building for the long term. Our strategic priorities are anchored in the balance between scale and control, growth and governance and innovation and stability. We are focused on broadening our product portfolio, deepening our distribution reach and strengthening our institutional capabilities in a way that allows us to stay agile in a dynamic environment."
+                        </p>
+                        <p className='mt-4 text-2xl w-fit bg-gradient-to-r from-[#c9243f] to-[#f6a11d] text-transparent bg-clip-text'>Raj Vikash Verma</p>
+                        <p>Chairman</p>
+
+                        {/* Button */}
+                      
+                    </div>
+                </div>
+                <div>
+                        <h1 className="font-semibold text-[#3c3a39] md:text-xl text-xl pt-1 mb-2">
+       Dear Shareholders,
       </h1>
-      <h1 className="text-[#10357f] font-semibold text-center text-4xl pt-4 mb-8">
-        Crafting Sustainable Momentum
-      </h1>
-
-      <img
-        className="mt-[-100px]"
-        src="src/assets/Chairman.webp"
-        alt="chairman"
-      />
-
-      <div className="relative ">
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Dear Stakeholders,
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          The IMF’s recent baseline forecast (World Economic Outlook April 2024)
-          shows that the global economy will continue to grow at 3.2% during
-          2024 and 2025, at the same pace as in 2023. A very minimal
-          acceleration from advanced economies will be offset by a modest
-          slowdown in emerging markets and developing economies. In such a
-          global backdrop, India shines as a bright spot and continues to be
-          among the world’s fastest growing major economies, with a robust GDP
-          growth projection of 6-8% in the coming years. India is now the third
-          largest automotive and lubricant-consuming market. Not only is India
-          an enormous and growing market, but also stable governance,
-          unprecedented growth in infrastructure investments, and changing
-          consumer demographics and aspirations are creating further potential
-          for volume and value growth in the lubricants sectors. <br />
-          <br /> Interestingly, the proportion of the middle class has more than
-          doubled in the last 20 years and is forecasted to continue to grow
-          well into the future. We can expect these aspiring consumers to
-          transform consumption patterns, with an increased demand for
-          high-quality products, brands and services. However, when it comes to
-          vehicle ownership, it is still very low in India. Only approximately
-          8% of families own a car, while 47% of households own a two-wheeler,
-          which means there is significant scope for growth in the automotive
-          lubricants industry. <br />
-          <br /> India is also investing significantly in the future. It has
-          long been a service market, but now it is becoming a manufacturing
-          hub. To support this transition, central and state governments are
-          investing in infrastructure as a priority, with 1.7 trillion dollars
-          expected in the next four to five years. There are also exciting
-          targets for expansion in rail networks, airports and in improving
-          connectivity to the ports. There are impressive prospects for
-          manufacturing, power and energy, along with high-growth sectors with
-          service support such as mining, metals, textile and cement. This will
-          positively impact the growth of the lubricants sector, especially
-          within the industrial segment, driving significant advancements.
-          <br />
-          <br /> Competition is intensifying, prompting brands to increasingly
-          appoint brand ambassadors. Your Company is operating in the most
-          promising geography, with the right products and solutions, and
-          targeting the most high-potential sectors for continued stakeholder’s
-          value maximisation.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Outperforming the Industry, Crossing New Milestones
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          In FY 2023-24, Gulf Oil has accomplished significant growth, setting
-          high standards for the industry as a whole in a challenging market
-          landscape. We have recorded the highest-ever annual revenue and profit
-          for FY 2023-24. Drawing confidence from our overall performance and
-          cash flow generation, the board has declared a total dividend for FY
-          2023-24 at ₹36.00 per equity share. The critical business levers for
-          our year-on-year higher level of financial growth include gradually
-          expanding margins, prudent cost management, improved product mix,
-          robust cashflows, better-working capital management and relentless
-          premiumisation of our products.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Unlock 2.0 as a Strategic Theme for Future Growth{" "}
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          With India shining as the third-largest lubricants market globally, we
-          are poised to unlock new opportunities while continuing to grow in our
-          core lubricants segment. We have initiated ‘Unlock 2.0: Accelerate,
-          Premiumize, Transform’, a strategic theme aimed towards next level of
-          growth & success. This approach focuses on accelerating growth in our
-          lubricants segment leveraging our strengths to enhance market share
-          across portfolio; improving our value proposition through product
-          innovation and premiumisation; increased investments in digital
-          infrastructure, brand initiatives, and expanding EV charging solutions
-          to drive transformation and sustainable growth. The strategic
-          acquisitions made in E-mobility segment positions us to play a pivotal
-          role in shaping the future of transportation.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Embracing Sustainability at Every Step
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          At Gulf Oil, we are committed to enhancing sustainability through a
-          comprehensive approach that minimises our environmental impact and
-          promotes responsible business practices. Our resource-efficient
-          initiatives emphasise water stewardship, focusing on restoring and
-          preserving water resources. We also prioritise the social and
-          emotional development of communities by providing free medical
-          assistance to populations in remote villages near our manufacturing
-          facilities, along with skills training in communication and financial
-          literacy. <br />
-          <br />
-          As a leader in India’s lubricant industry, we adhere to Extended
-          Producer Responsibility (EPR) for the safe disposal of packaging. Our
-          waste management practices target the reduction of E-waste, hazardous
-          waste and other types of end at waste.
-          <br />
-          <br />
-          We view product stewardship as a strategic opportunity to integrate
-          sustainability into our business strategy. We promote eco-friendly
-          products, such as long-drain oils, biodegradable hydraulic oils, EV
-          fluids, and AdBlue®. Acknowledging the evolving automotive industry,
-          Gulf is transforming is by investing in EV charging solutions through
-          Indra Renewables, ElectreeFi, and Tirex Tansmission aiming to develop
-          a comprehensive EV charging portfolio. Further, we are committed to
-          sustainable sourcing and refining our procurement processes, while
-          aiming to establish solar installations across all rooftops to achieve
-          a renewable energy generation capacity of 1.14 MW.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Lending a Helping Hand
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          At Gulf Oil, we continue to empower communities through various
-          initiatives. I am happy to share that the Gulf Superfleet Suraksha
-          Bandhan campaign has entered its 5th season in FY2023-24 and
-          distributed over 10,000 portable water purifiers to truck drivers and
-          installed community water purifiers at 12 Transportnagars across
-          India. <br />
-          <br />
-          The campaign also launched the Gulf Superfleet Suraksha Clinic,
-          providing truckers with free doctor consultations, discounts on
-          medicines and health check-ups. Additionally, our projects such as
-          Road to School and Road to Livelihood are designed to upskill
-          students, promote women’s empowerment and provide livelihoods in the
-          communities we serve. Our Kushal Mechanic Programme also offers
-          vocational training to mechanics, unveiling opportunities and
-          accelerating their professional growth.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Optimism on the Horizon
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          To capitalise on India’s unique opportunities, we are committed to
-          meeting the ever-evolving needs of consumers by delivering greater
-          value across diverse sectors. We are forging strategic partnerships,
-          empowering our talent, and placing a strong emphasis on crafting a
-          cleaner, greener future for all. <br />
-          <br />
-          We foster a caring, agile, and empowering work environment that
-          celebrates gender diversity, driving innovation, promoting equality,
-          and enhancing organizational performance by leveraging a diverse and
-          inclusive talent pool. In this innovative, exciting and rewarding
-          journey towards new horizons, Gulf Oil International will continue to
-          support Gulf Oil India with relevant strategies and resources. With
-          all our brand strength, relationships, and distribution channels, we
-          are committed to playing a pivotal role in contributing to the growth
-          of New India, while creating value for all stakeholders. <br />
-          <br />
-          We extend our heartfelt thanks to all our stakeholders and associates
-          for their unwavering support. A special acknowledgment goes to our
-          employees for their dedication in building the Company and its
-          businesses. I envision greater achievements for your Company in the
-          years to come and look forward to a successful year ahead.
-        </p>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">Regards,</p>
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Sanjay G. Hinduja
-        </h3>
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">Chairman</p>
+      <div className="bg-gradient-to-r bg-clip-text text-transparent font-semibold md:text-xl text-xl pt-2 pb-2 mb-4" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
+       It is a great honour to
+address you for the first
+time as Chairman of
+Veritas Finance. Stepping
+into this role at such
+a defining moment in
+the company’s journey
+is both a privilege
+and a responsibility,
+I deeply value.
       </div>
+      <div className="mb-3">
+        I am pleased to share that this Annual
+Report 2024-25 marks a year of strong
+progress and the beginning of an
+important new chapter as we prepare
+to enter the public markets and expand
+the Company’s footprint across India’s
+underserved financial landscape. I take
+this opportunity to reflect on the values
+that define us, the opportunities that lie
+ahead and the collective commitment
+that will guide us forward.
+      </div>
+      <div className='mb-3'>
+<h1 className='text-xl text-[#c9243f] mb-2'>What Drives Us </h1>
+<div><p className="mb-2">
+  At Veritas Finance, our Mission is to
+make a difference and create a positive
+impact in the lives of informal customers
+of MSMEs through sustainable financing
+solutions. Our Vision is to aspire to
+establish Veritas as a model Company,
+respected and most admired in the
+field of inclusive finance, recognised
+for fairness, responsibility and service
+quality. These principles have guided
+us since our inception in 2015, helping
+us serve communities often overlooked by traditional financial institutions.
+Over the past decade, we have built a
+wide distribution network across ten
+states and union territories, providing
+small loans, home loans and vehicle
+loans, among others.</p> 
+<p className="mb-2">
+FY 2025 has seen us reinforce these
+values by expanding our reach across
+rural and semi-urban India, tailoring
+products to meet local enterprise needs
+and building trust-based relationships
+at the grassroots level. We have
+successfully impacted the lives of around
+2,11,000 people and are seeking to bridge
+the demand/supply gap even further.
+This alignment between our Mission and
+our execution will continue to be our
+greatest strength.
+</p>
+</div>
+      </div>
+       <div className='mb-3'>
+<h1 className='text-xl text-[#c9243f] mb-2'>Performance and Progress </h1>
+<div><p className="mb-2">
+  Despite global macroeconomic
+uncertainties, the Indian economy
+maintained its momentum, and so did we.
+As of March 31, 2025, our Assets Under Management (AUM) stood at ₹7,349 crore,
+supported by huge disbursements and a
+growing customer base of entrepreneurs,
+consciously promoted and served by us
+in view of their huge potential to serve
+the broader economy. We expanded our
+physical presence across over 10 states
+and 1 union territory, powered by a purpose
+and passion-driven, strong employee base
+that is committed to our mission.</p> 
+<p className="mb-2">
+Our profitability has remained robust,
+with Profit After Tax reaching ₹292.19
+crore, while asset quality and compliance
+standards have only improved. This
+performance reflects the strategic and
+operational maturity Veritas has achieved
+over the past nine years.
+</p>
+</div>
+      </div>
+       <div className='mb-3'>
+<h1 className='text-xl text-[#c9243f] mb-2'>Strategic Priorities
+and Growth Outlook</h1>
+<div><p className="mb-2">
+  As we look ahead, we see the NBFC sector
+entering a phase of greater responsibility
+and sharper focus on the growth of
+the economy, with the NBFCs playing
+a definitive role in meeting the credit
+demands in the economy. With deeper
+credit penetration, stronger regulatory
+frameworks and more sophisticated
+risk and technology practices emerging
+across the industry, the opportunity for
+Veritas has never been more promising.
+The MSME financing space, in particular,
+stands at the cusp of huge growth and
+expansion as this market segment
+continues to be grossly underserved, and
+far from saturation, yet full of potential
+and promise. This dichotomous challenge
+is well recognised by Veritas, which the
+Company will seek to address through
+a clarity of purpose, strategic vision and
+consistency in execution.</p> 
+<p className="mb-2">
+As an organization, we remain deeply
+committed to fostering gender diversity
+and inclusivity – both within Veritas
+and across the communities we serve.
+We believe that empowering women
+and underrepresented groups is vital
+to driving sustained inclusive economic
+progress.While as at March 31, 2025,
+women borrowers hold around 14 % of
+our total loan portfolio, our ‘Dhanasakthi’
+loan product launched exclusively for
+women in November 2023, stands as
+a fitting testament to this commitment.
+Since its roll-out, more than 2,000
+deserving women entrepreneurs
+have been granted Working Capital
+facilities enabling them to gain financial
+independence and build resilient
+businesses. In parallel, we are also increasingly focused on embedding
+climate-conscious practices into our
+operations and lending approach. As
+we look ahead, green lending and
+environmentally responsible financing
+will be integral to our strategy as we align
+growth with sustainability and resilience.
+</p>
+<p className="mb-2">
+  At Veritas, we are building for the long
+term. Our strategic priorities are anchored
+in the balance between scale and control,
+growth and governance and innovation and
+stability. We are focused on broadening
+our product portfolio, deepening our
+distribution reach, and strengthening
+our institutional capabilities in a way that
+allows us to stay agile in a dynamic and
+ever-evolving environment. We are also
+in the process of formalising our ESG
+roadmap, as I believe sustainability and
+stakeholder accountability will increasingly
+define the success of financial institutions in
+the years to come
+.
+</p>
+</div>
+      </div>
+       <div className='mb-3'>
+<h1 className='text-xl text-[#c9243f] mb-2'>Together Towards Purpose</h1>
+<div>
+<p className="mb-2">
+I wish to express my deep appreciation to
+all our stakeholders, our Board, investors,
+employees, customers and partners, for
+their trust and unswerving belief in our
+vision. As we step confidently towards
+becoming a listed company, we remain
+resolute in our commitment to delivering
+value through financial inclusion and
+institutional integrity.
+</p>
+<p className="mb-2">
+  Together, let’s keep building not just a
+profitable enterprise, but a purposeful
+one—an institution rooted in resilience,
+relevance, and ambition. One that does
+more than just chase market share, it
+serves the aspirations of real India.
+</p>
+</div>
+      </div>
+      <div className="mt-4 mb-3">
+<p>With Regards,</p>
+<p className="md:text-3xl text-xl mt-4 bg-gradient-to-r from-[#c9243f] to-[#eb8a2b] bg-clip-text text-transparent font-semibold  ">
+  Raj Vikash Verma
+</p>
+<p className="">
+  Chairman and Non-Executive 
+</p>
+<p>Independent Director</p>
+      </div>
+                </div>
+
     </div>
   );
 };

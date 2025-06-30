@@ -385,4 +385,44 @@ a{
 	  visibility: visible;
 	  opacity:1; 	
 	}
+	
+}
+.sub-menu {
+  display: none;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.sub-menu.active {
+  display: block;
+  opacity: 1;
+  animation: slideLeft 0.2s ease forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* You can include these in your Navbar.css if not present */
+.menu {
+  @apply fixed top-0 left-0 w-full h-full bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out sm:static sm:translate-x-0 sm:flex sm:items-center sm:bg-transparent sm:h-auto;
+}
+
+.menu.active {
+  @apply translate-x-0;
+}
+
+.menu-overlay {
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40 hidden sm:hidden;
+}
+
+.menu-overlay.active {
+  @apply block;
 }

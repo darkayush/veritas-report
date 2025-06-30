@@ -1,207 +1,350 @@
 const ManagingDirector = () => {
   return (
     <div className="marginal">
-      <h1 className="text-[#f26724] font-semibold text-center md:text-5xl text-3xl pt-4">
-        MD and CEO’s Message
+<div className='md:!flex justify-start items-center my-5'>
+                    <div className="md:w-[26%] relative">
+                        <div className="bg-white rounded-t-xl overflow-hidden pr-4 pt-2 bg-gradient-to-tl from-gray-300 to-transparent">
+                            <img src="/home/Arul.webp" alt="Arul" className="w-full" />
+                        </div>
+                        <div className="absolute bottom-0 left-0 w-full h-[4px] bg-gradient-to-r from-[#c9243f] to-[#f6a11d] rounded-b-xl"></div>
+                    </div>
+                    <div className='md:w-[56%] pl-10'>
+                        <p className='md:text-xl md:w-[95%]'>
+                            "Our Loan book
+grew by 28.39% to
+INR 7,349 Crores, driven
+by disbursements of
+INR 3,933 Crores."
+                        </p>
+                        <p className='mt-4 text-2xl w-fit bg-gradient-to-r from-[#c9243f] to-[#f6a11d] text-transparent bg-clip-text'>D. Arulmany</p>
+                        <p>Managing Director and CEO</p>
+
+                        {/* Button */}
+                       
+                    </div>
+                </div>
+                <div>
+                  <h1 className="font-semibold text-[#c9243f] md:text-xl text-xl pt-1 mb-1">
+       Dear Shareholders,
       </h1>
-      <h1 className="text-[#10357f] font-semibold text-center text-4xl pt-4 mb-8">
-        Bolder Strides Towards 2.0
-      </h1>
-
-      <img className="mt-[-100px]" src="src/assets/MD.webp" alt="chairman" />
-
-      <div className="relative ">
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Dear Stakeholders,
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          It gives me immense pleasure to share with you our Annual Report for
-          FY 2023-24. The year gone by was truly a landmark year for us, a
-          period marked by continuous growth and evolution. <br /> <br />
-          Notwithstanding several challenges, we have maintained our growth
-          momentum and have been growing 2-3x of the industry volume growth rate
-          over the last decade. We take pride in being positioned as a leading
-          brand in India and strongly believe it is now time for us to unlock
-          the next level of growth and value creation in an ever-evolving
-          industry landscape.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Continued Growth Momentum
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          Our robust financials, marked by the highest-ever annual revenue and
-          profitability for FY 2023-24, are a testament to our success. Our
-          resilient business model, strong brand reputation, extensive
-          distribution network, and passion for excellence have empowered us to
-          outperform even in a challenging market.
-          <br /> <br />
-          For FY 2023-24, our revenue reached ₹3,284.10 crore, reflecting a
-          9.50% year-on-year growth. Our EBITDA surged by 22.33% year-on-year to
-          ₹419.38 crore, while our Profit After Tax (PAT) stood at ₹308.10
-          crore, demonstrating an impressive 33% growth. This growth is
-          indicative of our strategic initiatives and market responsiveness.
-          During this financial year, we gained market share across both B2B and
-          B2C segments, expanding our distribution network and launching
-          innovative, value-driven products. Our targeted B2C sales and
-          marketing initiatives significant boosted growth in commercial vehicle
-          oils (CVO), motorcycle oils (MCO), and the agricultural sector. Our
-          robust brand identity is strengthened through associations with
-          esteemed brand ambassadors like Mahendra Singh Dhoni, Hardik Pandya,
-          and Smriti Mandhana. These efforts underscore our relentless drive for
-          performance and adaptability to evolving market dynamics, setting new
-          industry standards as consumers increasingly prioritise value.
-          <br /> <br />
-          Our B2B growth is driven by significant advancements in manufacturing
-          and infrastructure across various sectors, adding marquee customers,
-          built on a foundation of service, trust, and strong partnerships. At
-          Gulf, we are confident this segment is poised to thrive as India
-          invests heavily in its future. While our primary market is domestic,
-          we also export Gulf and OEM-branded products to over 25 countries.
-          <br /> <br />
-          We are dedicated to expanding our eco-friendly products, having
-          pioneered the AdBlue® range in India. This automotive-grade urea
-          solution, designed for diesel engines with emission control systems,
-          has seen 65% volume growth in FY24, positioning us as a leading
-          AdBlue® supplier through strategic partnerships with multiple OEMs and
-          leveraging our distribution network. With the implementation of BS VI
-          emission standards, AdBlue® has rapidly emerged as a significant
-          segment in the market complementing to our strength in the commercial
-          vehicle oil leveraging our brand equity, quality and responsive
-          distribution.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Key Business Strategies and Unlock 2.0 for a Future-ready Approach
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          As a growing organisation, our strategy is built on six pillars: a
-          segment-wise approach, brand strength, technology and innovation,
-          nurturing and growing OEM and B2B relationships, passion for
-          excellence and focus on expanding within the e-Mobility value chain.{" "}
-          <br /> <br />
-          To unlock the next level of growth and success, our three-pronged
-          strategy focuses on enhancing our core lubricants business,
-          premiumising our portfolio, and transforming operations through a
-          digital-centric culture and investment in e-Mobility value chain.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Lubricants to Continue as Key Focus Segment
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          As we advance to the next level of growth, our primary focus is on
-          strategic, sustainable, and profitable expansion in our core
-          lubricants business. According to Kline & Co., the Indian lubricants
-          industry is projected to achieve 3% volume and 6% value growth CAGR
-          from 2022 to 2032, despite decarbonisation efforts. Factors such as
-          resilient GDP growth, manufacturing development, increased vehicle
-          penetration and a growing middle class will further sustain India’s
-          growth momentum, ensuring it remains a bright spot for the coming
-          years and positioning us to capitalise on opportunities for long-term
-          success across our diverse portfolio.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Targeting Growth with a ‘Right to Win’ Approach
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          Over the last decade and a half, we have successfully adopted a
-          segment-wise focus based on our ‘Right to Win’ approach. We
-          continuously add new segments, sub-segments, and attractive focus
-          areas, while exploring Core, New, Allied, and Future business
-          segments.
-          <br /> <br />
-          We focus on forming dedicated teams for each segment to capitalise on
-          opportunities, increase market share, and expand our customer base. At
-          the core of our leadership philosophy is a commitment to empowerment,
-          transparency in communication, and long-term consistency of our
-          strategic levers. By nurturing an environment where employees feel
-          valued and motivated, we drive our growth and reach new heights of
-          success year after year.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Stellar Pan-India Network
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          We are continuously leveraging our robust distribution network as a
-          key pillar of growth. Our pan-India presence spans B2C, B2B, and
-          Battery Sales and Service. Our extensive B2C network has experienced
-          notable double-digit growth, driven by expansion in both rural and
-          urban areas, with an aim to increase by 10-15% annually. In the B2B
-          segment, we nurture relationships with OEMs and secondary customers
-          across diverse sectors, ensuring we meet their evolving needs.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Powering Up Our Brand Strength
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          Over the past 14-15 years, the Gulf brand has thrived through
-          aggressive brand-building efforts, becoming the fastest-growing
-          lubricants brand in India and securing a top-two position among
-          private sector players in key segments. Our dynamic marketing
-          strategies have effectively reached end consumers, retailers, and
-          mechanics, driving significant growth. Our brand presence is further
-          enhanced with major campaigns such as Formula SUV campaign, Agri –
-          360˚ campaign, CVO campaign, Gulf Pride 2-Wheeler campaign in
-          partnership with celebrated ambassadors like Mahendra Singh Dhoni,
-          Hardik Pandya, and Smriti Mandhana. <br /> <br />
-          This IPL T-20 season, we prioritised our customers in the Gulf
-          Unstoppable Army campaign, empowering fans to create their own
-          advertisements for the Chennai Super Kings (CSK). Our efforts to
-          enhance brand equity are centred on creating memorable experiences
-          that elevate customer satisfaction, driving our mission to be the
-          preferred choice in the lubricants market.
-        </p>
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Charged Up and Ready for the Next
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          We are actively expanding our presence in the e-Mobility ecosystem by
-          establishing a comprehensive range of e-Mobility products, including
-          specialised EV fluids designed for hybrid and electric vehicles to
-          optimise performance and reduce CO2 emissions. <br /> <br />
-          In recent years, we made three strategic acquisitions—Indra
-          Renewables, ElectreeFi, and Tirex Transmission —to build a complete EV
-          charging portfolio. We are well positioned to capitalise in this
-          segment of e-Mobility making them a meaningful contributor to our
-          overall business in coming years. <br /> <br />
-          Additionally, we are looking at data centre liquid cooling
-          opportunities, targeting significant environmental benefits. We are
-          future-ready and charged up for the next level of growth and long-term
-          value creation.
-        </p>
-
-
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Together We’re Unstoppable
-        </h3>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">
-          Our core strategy is to continue outperforming the industry, growing at 2-3 times the industry volume growth rate. Simultaneously, we aim to gain market share, offer value products, focus on premiumisation, gradually expand margins, and grow the e-Mobility business with our investments in the EV charging space. Together, we have reached many milestones, and I am confident that our collective efforts will empower us to unlock Gulf Oil 2.0 and co-create value for all stakeholders. <br /> <br />
-          Before I conclude, I must convey my gratitude to our esteemed Chairman, fellow Board members, Gulf Oil International, the Hinduja Group, esteemed customers, employees, trade channel partners, investors, bankers, brand ambassadors, partners, agencies, and all other internal and external stakeholders for their encouragement and support in our journey.
-
-        </p>
-
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">Regards,</p>
-        <h3 className="text-[#10357f] font-bold text-left text-xl pt-4 ">
-          Ravi Chawla
-
-        </h3>
-        <p className="text-[#4d4d4f] text-left text-xl pt-4 mb-8">MD & CEO</p>
+        <div className="bg-gradient-to-r bg-clip-text text-transparent font-semibold md:text-xl text-xl pt-2 pb-2 mb-4" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
+     As I sit to write the
+letter for this year,
+I reflect on the
+journey of Veritas
+since inception. It
+has been exciting 10
+years. Ten years of
+growth. Ten years
+of transformation.
+Ten years of impact.
+Ten years of making
+a difference. Ten
+years filled with
+purpose and passion
       </div>
+      <div>
+    <div className="mb-4">
+      <p className="mb-2">
+In 2015, Veritas was merely an idea. An
+idea to make a positive impact in million
+households in Rural India. An idea that
+has found acceptance with marquee
+investors. An idea that has already
+impacted over 200000 customers.
+An idea that is now shared by over
+8000 employees.
+</p>
+<p className="mb-2">
+Guided by our eminent board, supported
+by marquee investors and lenders, Veritas
+over the last ten years has meticulously
+and methodically given shape to the
+vision and reached out to more than
+438 branches across ten states. Today,
+Veritas serves the financial needs of
+diversified segments. With products like
+rural business loans, affordable housing
+loans, used commercial vehicle loans and
+working capital loans, we cover a wide
+range of rural India’s financial needs.
+While our Annual Report may reflect
+our growth in numbers, it may not fully
+capture the obstacles and headwinds we
+faced along the way. It is our prudence,
+perseverance, concern for our customers,
+and care for our employees that helped
+us overcome all the adversities and
+uncertainties. We chose to place faith
+over fear, conviction over scepticism.
+Thus, in the face of adversity, we have
+remained resilient, constantly adapting
+to the ever-changing environment while
+continuing to pursue our journey unfazed.
+As I sit to write the
+letter for this year,
+I reflect on the
+journey of Veritas
+since inception. It
+has been exciting 10
+years. Ten years of
+growth. Ten years
+of transformation.
+Ten years of impact.
+Ten years of making
+a difference. Ten
+years filled with
+purpose and passion.
+Dear Shareholders,
+During this decade, India’s economy
+also remained resilient with steady GDP
+growth, despite the impact of various
+macro events like demonetization, GST
+implementation, Liquidity crisis, COVID
+black swan crisis etc. Not only it remained
+resilient, the Government’s thrust on
+building a robust digital infrastructure
+has fast tracked the financial inclusion
+initiatives. This landscape offers NBFCs
+like ours, particularly those serving
+micro and small enterprises, a unique
+opportunity to bridge credit gaps faster
+and foster grassroots entrepreneurship.  
+</p>
     </div>
+    <div className="mb-4">
+<h1 className='text-xl text-[#c9243f] mb-2'>Operational and Financial Highlights</h1>
+<div>
+  <div className="mb-3">
+      <p className="mb-2">
+After witnessing reasonably strong and
+vibrant growth post COVID, the macro
+environment remained subdued during
+the last year. The year which started with
+elections and geopolitical disruptions
+continued to be suppressed right
+through. While we did see some signs of
+stability in the last quarter, we are yet to
+see definitive signals of the strong revival
+of the economy.
+</p>
+<p className="mb-2">
+Despite a difficult environment, I am
+happy to convey that your company has
+delivered a strong and broad-based
+performance across key operational and
+financial indicators. Our Loan book grew
+by 28.39% to INR 7,349 Crores, driven
+by disbursements of INR 3,933 Crores,
+a 6.23% increase from the previous
+year. We reported a Profit After Tax
+(PAT) of INR 292 Crores, up from INR
+245 Crores in FY 2023-24, reflecting
+both scale and efficiency gains. Our
+customer base expanded to 2.11 lakhs, a
+significant increase from 1.76 lakhs last
+year, highlighting our growing relevance
+among microenterprise borrowers.
+</p>
+<p className="mb-2">
+  While our secured business loan and
+affordable housing loan segment
+continued to show resilient portfolio
+behaviour, we witnessed stress in certain
+urban pockets of short-term working
+capital loans. Some cash starved urban
+shopkeepers fell prey to the easy
+availability of digital loans at significantly
+higher rate of interest and found it difficult
+to service the loans and overcome
+the stress. This had an impact on our
+repayments as well. Following this, we
+have made certain major changes to the
+product offering and are confident that
+we will see a significant turnaround in this
+segment in the coming months.
+</p>
+<p className="mb-2">
+  I am also delighted to report that used
+commercial vehicle loans completed one
+full year of operations and continued to
+grow at a steady pace and crossed Loan
+book of INR 300 Crores at the end of
+March 25. We see a huge opportunity in
+this segment and the experience of the
+team, and the distribution reach we have
+established will help us build a strong
+portfolio in coming months.
+</p>
+    
+  </div>
+</div>
+    </div>
+{/* mm */}
+<div className="mb-4">
+  <h1 className='text-xl text-[#c9243f] mb-3'>Tech-enabled
+organisational progress </h1>
+  <p className="mb-2">
+    We have harnessed the transformative
+power of advanced technology to
+enhance operational efficiency, improve
+customer experience and build robust
+risk mitigation strategies. Our zero-dataentry onboarding model, powered by
+OCR tools and multilingual mobile apps,
+enables fully paperless loan origination,
+e-KYC, underwriting and disbursement.
+It is quite impressive to announce that
+we achieved 100% digital disbursement,
+with over 89% of secured loan collections
+processed via UPI, e-NACH or dynamic
+QR codes, improving turnaround times
+and service quality
+  </p>
+  <p className="mb-2">
+    Our teams are equipped with real-time
+dashboards to monitor key performance
+metrics, such as collection efficiency and
+loan rejection rates. Our enhanced cloud
+infrastructure, cybersecurity and disaster
+recovery systems ensure uncompromised
+operational resilience. Further, with ISO
+27001:2022 certification and regular
+audits, we are well-positioned to scale
+new products such as vehicle finance
+with greater speed and control.
+  </p>
+</div>
+<div className="mb-4">
+  <h1 className='text-xl text-[#c9243f] mb-2'>Technology and
+Operational Excellence</h1>
+  <p className="mb-2">
+   In FY 2024-25, we further advanced
+our digital transformation to enhance
+operational efficiency, customer
+experience and risk management. Our
+zero-data-entry onboarding model,
+powered by OCR tools and multilingual
+mobile apps, enables fully paperless
+loan origination, e-KYC, underwriting and
+disbursement. We achieved 100% digital
+disbursement, with over 89% of secured
+loan collections processed via UPI,
+e-NACH or dynamic QR codes, improving
+turnaround times and service quality.
+  </p>
+  <p className="mb-2">
+    Additionally, we equipped our teams
+with real-time dashboards to monitor key
+performance metrics such as collection
+efficiency and loan rejection rates.
+Our enhanced cloud infrastructure,
+cybersecurity and disaster recovery
+systems ensure operational resilience.
+With ISO 27001:2022 certification and
+regular audits, we are well-positioned to
+scale new products like vehicle finance
+with greater speed and control. 
+  </p>
+</div>
+<div className="mb-4">
+  <h1 className='text-xl text-[#c9243f] mb-2'>Strategic Roadmap
+and Vision 2028</h1>
+  <p className="mb-2">
+   As we complete our 10th year and
+enter the 11th, we also realise that we
+are very close to reaching a significant
+milestone of INR 10,000 Crores
+Loan book. All our products are on a
+strong growth trajectory, and we are
+committed to building a robust and
+diversified company, admired for its
+values, resilience and contribution to
+India’s economy.
+  </p>
+  <p className="mb-2">
+   Our growth strategy remains anchored
+in five strategic pillars: expanding in
+underpenetrated markets with controlled
+geographic focus; diversifying our
+portfolio through scalable offerings like
+affordable Housing Loans and used
+commercial vehicle loans; investing in
+people through a value-driven culture;
+embedding technology and dataled processes across origination and
+collections to boost productivity; and
+forging strong partnerships to optimize
+our funding mix. These priorities reflect
+our commitment to responsible growth
+while staying true to our core purpose.
+  </p>
+</div>
+<div className="mb-4">
+  <h1 className='text-xl text-[#c9243f] mb-2'>Corporate Social Responsibility
+and ESG Commitment</h1>
+  <p className="mb-2">
+   At Veritas, we view social responsibility
+as integral to our purpose of inclusive
+growth. In FY 2024-25, we introduced
+“Swastha” master health check-up
+camps, conducted financial literacy
+sessions for rural borrowers, and
+undertook employee-led wellness
+programs like the Walkathon Challenge
+and Veritas Premier League (VPL).
+Through Veritas Foundation, we also
+supported infrastructure development
+by building and maintaining smart
+public toilets at the Tiruchirappalli bus
+terminal. Our education efforts included
+renovation of Government High School at
+Ladapuram, and providing scholarships
+to 42 deserving female students from
+underprivileged backgrounds, across
+Tamil Nadu, empowering them to pursue
+higher education in fields of their choice.
+Looking ahead, ESG will remain pivotal
+to our strategy. Our ESG journey will
+evolve through collaboration, learning,
+and continuous improvement. We are
+in the process of initiating a formal
+ESG materiality assessment to identify
+and embed sustainability priorities into
+our strategy. In the months ahead, we
+will define clear ESG goals, engage
+with stakeholders, and build internal
+capacity to measure and report our
+progress effectively. This dual focus, on
+measurable social impact and long-term
+environmental stewardship, underscores
+our commitment to building a responsible
+and resilient financial institution.
+  </p>
+  <p className="mb-2">
+  I am grateful to our employees, Board,
+investors, customers, lenders, and
+regulatory partners. Your unwavering
+support fuels our resolve to grow with
+integrity and impact. As we prepare to
+enter the public markets, we do so with a
+clear mission to empower the real Bharat
+and to build a financial institution that
+stands for trust, inclusion, and long-term
+value creation.
+  </p>
+</div>
+    </div>
+      </div>
+      <div className="mt-4 mb-3">
+<p>With Regards,</p>
+<p className="md:text-3xl text-xl mt-4 bg-gradient-to-r from-[#c9243f] to-[#eb8a2b] bg-clip-text text-transparent font-semibold  ">
+  D. Arulmany
+</p>
+<p className="">
+  Managing Director and CEO
+</p>
+      </div>
+                </div>
+   
   );
 };
 

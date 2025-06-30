@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import AnimatedCounter from "../common/AnimatedCounter"; // import your counter
+import { div } from "framer-motion/client";
 
 const pointerVariant = {
   hidden: { opacity: 0, y: -20 },
@@ -41,11 +42,13 @@ const Buisiness_High = () => {
   const isMapInView = useInView(mapRef, { once: true });
 
   return (
-    <div className="flex flex-col lg:flex-row items-start marginal">
+    <>
+   
+    <div className="flex flex-col lg:flex-row items-start marginal ">
       {/* Left side */}
       <div className="flex-1">
         <div className="z-20 flex flex-col justify-center py-5">
-          <h1 className="font-extrabold text-2xl sm:text-4xl text-[#3c3a39] mb-4">
+          <h1 className="font-extrabold text-2xl sm:text-4xl text-[#3c3a39] mb-4 ">
             Geographic Footprint
           </h1>
           <h2 className="font-extrabold text-3xl sm:text-5xl mb-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
@@ -60,7 +63,7 @@ const Buisiness_High = () => {
         </div>
 
         {/* Business Values */}
-        <div className="flex flex-col gap-10 w-fit">
+        <div className="flex flex-col gap-10 w-fit ">
           {firstRow.map((item, index) => (
             <motion.div
               key={index}
@@ -83,7 +86,7 @@ const Buisiness_High = () => {
               }}
             >
               {/* Animated Counter + animated underline */}
-              <div className="font-medium text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#c9243f] to-[#f6a11d] relative w-fit pb-2">
+              <div className="font-medium text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#c9243f] to-[#f6a11d] relative w-[40%] pb-2">
                 <AnimatedCounter value={parseInt(item.value)} />
                 <motion.div
                   className="h-1 bg-red-500 absolute bottom-0 left-0"
@@ -138,6 +141,8 @@ const Buisiness_High = () => {
         </div>
       </div>
     </div>
+   
+    </>
   );
 };
 

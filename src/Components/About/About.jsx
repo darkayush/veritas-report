@@ -95,7 +95,7 @@ const About = () => {
 
                     <div>
                         <button
-                            onClick={() => navigate('/')}
+                            onClick={() => navigate('/corporate-overview/more-about-veritas')}
                             className="px-8 py-3 text-sm sm:text-base font-bold uppercase tracking-wide text-black bg-white border border-gray-300 rounded-xl shadow-lg transition duration-300 hover:bg-gradient-to-r from-[#c9243f] to-[#f6a11d] hover:text-white hover:-translate-y-1 mt-10"
                         >
                             Know More

@@ -119,7 +119,7 @@ const TimelineCarousel = () => {
             })}
           </Slider>
 
-          <div className="mt-10 flex justify-center relative h-52">
+          <div className="mt-10 flex justify-center relative h-60">
             <AnimatePresence mode="wait">
               <motion.div
                 key={timelineData[activeIndex].year}
