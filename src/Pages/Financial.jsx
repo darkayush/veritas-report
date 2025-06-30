@@ -4,7 +4,7 @@ const Financial = () => {
             <h1 className="text-[#f26724] font-semibold text-center md:text-5xl text-3xl pt-4"> Key Performance Indicators </h1>
             <h1 className="text-[#10357f] font-semibold text-center text-4xl pt-4 mb-8"> Mapping a Growing Trajectory </h1>
 
-            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-12 items-start flex-wrap gap-8 mb-8 flex justify-center ">
+            <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-12 items-start flex-wrap mb-8  justify-center ">
                 <img className="" src="src/assets/ff1.png" alt="" />
                 <img className="" src="src/assets/ff2.png" alt="" />
                 <img className="" src="src/assets/ff3.png" alt="" />
@@ -25,7 +25,7 @@ const Financial = () => {
                 <p className="text-[#ffffff] font-regular text-right text-sm mr-8  ">Chief Financial Officer & President – Strategic Sourcing, IT & Legal</p>
 
             </div>
-            <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-12 items-start flex-wrap gap-8 mb-8 flex justify-center ">
+            <div className="md:grid-cols-2 sm:grid-cols-2 gap-12 items-start flex-wrap mb-8 flex justify-center ">
                 <img className="" src="src/assets/man1.webp" alt="" />
                 <img className="" src="src/assets/man2.webp" alt="" />
 

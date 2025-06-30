@@ -11,10 +11,10 @@ const timelineData = [
   { year: "2018", description: ["Achieved cumulative break-even.", "Crossed 100 branches and expanded into Telangana Andhra Pradesh and Madhya Pradesh.", "Raised equity from Norwest Venture Partners and British International Investments.", "Received CARE BBB+ rating for long-term banking facilities."] },
   { year: "2019", description: ["Entered Jharkhand.", "Loan book crossed INR 1,000 Crores."] },
   { year: "2020", description: ["Raised equity from Kedaara Capital, Norwest and Lok Capital.", "Received CARE A- rating for long-term banking facilities."] },
-  { year: "2021", description: ["Raised equity from a consortium of marquee investors including Norwest, Kedaara, Growth Catalyst and Evolvence."] },
+  { year: "2021", description: ["Raised equity from a consortium of marquee investors including Norwest Venture Partners X - Mauritius, Kedaara Capital Fund II LLP, Growth Catalyst Partners LLC and Evolvence India Fund III Ltd."] },
   { year: "2022", description: ["Customer base crossed 100,000; branch network reached 250+.", "Received CARE A1+ short-term credit rating for Commercial Paper."] },
   { year: "2023", description: ["Commenced operations in Bihar and Chhattisgarh.", "Received CARE A+ for long-term and A1+ for short-term banking facilities.", "Raised funds from Multiples Private Equity Fund III and Avendus Future Leaders Fund II.", "Loan book crossed INR 5,000 Crores."] },
-  { year: "2024", description: ["Crossed 400 branches.", "Launched vehicle loans.", "Long-term CARE A+ outlook revised to ‘Positive’."] },
+  { year: "2024", description: ["Crossed 400 branches.", "Launched vehicle loans.", "Long-term CARE A+ outlook revised to ‘Positive’.","Converted from Private Limited to Public Limited Company"] },
   { year: "2025", description: ["Loan book crossed INR 7,000 Crores."] }
 ];
 
@@ -85,16 +85,16 @@ const TimelineCarousel = () => {
 
       <div className="relative z-10">
         <div className="inset-0 z-20 flex flex-col justify-center px-6 sm:px-20 py-12">
-          <h1 className="font-extrabold text-2xl sm:text-4xl text-[#11111] mb-4">
+          <h1 className="font-bold text-2xl sm:text-4xl text-[#11111] mb-4">
             10 Glorious Years
           </h1>
-          <h2 className="font-extrabold text-3xl sm:text-6xl mb-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
+          <h2 className="font-bold text-3xl sm:text-6xl mb-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
             Unveiling our remarkable journey
           </h2>
-          <h2 className="font-extrabold text-3xl sm:text-6xl mb-6 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit">
+          <h2 className="font-bold text-3xl sm:text-6xl mb-6 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit">
             over the years
           </h2>
-          <p className="text-2xl">
+          <p className="text-xl">
             Over the years, we have evolved in step with changing times, expanding our offerings to retail customers and enabling their financial empowerment.
           </p>
         </div>

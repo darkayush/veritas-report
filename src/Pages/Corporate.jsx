@@ -94,25 +94,25 @@ const directoryData = {
     }
   ],
   creditRatingAgencies: [
-  {
-    name: "CARE Ratings Limited",
-    address: [
-      "4th Floor, Godrej Coliseum",
-      "Somaiya Hospital Road",
-      "Mumbai – 400 022"
-    ]
-  }
-],
-registrarAndTransferAgent: [
-  {
-    name: "KFIN Technologies Limited",
-    address: [
-      "Selenium Tower B, Plot 31-32, Gachibowli",
-      "Financial District, Nanakramguda",
-      "Hyderabad – 500 032"
-    ]
-  }
-],
+    {
+      name: "CARE Ratings Limited",
+      address: [
+        "4th Floor, Godrej Coliseum",
+        "Somaiya Hospital Road",
+        "Mumbai – 400 022"
+      ]
+    }
+  ],
+  registrarAndTransferAgent: [
+    {
+      name: "KFIN Technologies Limited",
+      address: [
+        "Selenium Tower B, Plot 31-32, Gachibowli",
+        "Financial District, Nanakramguda",
+        "Hyderabad – 500 032"
+      ]
+    }
+  ],
 
 };
 
@@ -120,47 +120,43 @@ registrarAndTransferAgent: [
 const Corporate = () => {
   return (
     <div className="w-full bg-[#f2d8cf] text-[#3c3a39]">
-          <div className="marginal ">
-         <h1 className="font-semibold text-[#3c3a39] md:text-4xl text-3xl  mb-2 border-b-2 border-[#c62033] py-3 inline-block">
-       Corporate Information
-      </h1>
-    
+      <div className="marginal ">
+        <h1 className="font-bold text-[#3c3a39] md:text-4xl text-3xl  mb-2 border-b-2 border-[#c62033] py-3 inline-block">
+          Corporate Information
+        </h1>
+
 
         {/* Board of Directors */}
         <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-3">Board of Directors</h2>
         <div className="grid sm:grid-cols-2 gap-6 mb-6 border-b border-[#c62033] pb-6 ">
-         {directoryData.boardOfDirectors.map((member, i) => {
-  const specialMembers = [
-    "Ms. Priyamvada Ramkumar",
-    "Mr. Sudhir Narayanankutty Variyar",
-    "Mr. P. Surendra Pai",
-    "Mr. J Prakash Rayen",
-    "Mr. Naveen Raj R",
-    "Ms. V Aruna"
-  ];
+          {directoryData.boardOfDirectors.map((member, i) => {
+            const specialMembers = [
+              "Mr. P. Surendra Pai",
+              "Mr. J Prakash Rayen",
+              "Mr. Naveen Raj R",
+              "Ms. V Aruna"
+            ];
 
-  const isSpecial = specialMembers.includes(member.name);
+            const isSpecial = specialMembers.includes(member.name);
 
-  return (
-    <div key={i}>
-      {isSpecial ? (
-        <>
-        <div className="">
-
-       
-          <p className="font-bold text-[#000000] ">{member.role}</p>
-          <p className="font-bold text-[#000000]">{member.name}</p>
-           </div>
-        </>
-      ) : (
-        <>
-          <p className="font-bold text-[#000000]">{member.name}</p>
-          <p className="text-sm text-gray-700">{member.role}</p>
-        </>
-      )}
-    </div>
-  );
-})}
+            return (
+              <div key={i}>
+                {isSpecial ? (
+                  <>
+                    <div className=" border-t border-red-500 pt-3 w-fit">
+                      <p className="font-bold text-[#000000] ">{member.role}</p>
+                      <p className="font-bold text-[#000000]">{member.name}</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p className="font-bold text-[#000000]">{member.name}</p>
+                    <p className="text-md text-gray-700">{member.role}</p>
+                  </>
+                )}
+              </div>
+            );
+          })}
 
         </div>
 
@@ -170,7 +166,7 @@ const Corporate = () => {
           {Object.entries(directoryData.bankers).map(([category, banks], i) => (
             <div key={i}>
               <p className="font-semibold mb-2">{category}</p>
-              <ul className="list-disc list-inside text-sm text-gray-700">
+              <ul className="text-md text-gray-700">
                 {banks.map((bank, j) => (
                   <li key={j}>{bank}</li>
                 ))}
@@ -184,7 +180,7 @@ const Corporate = () => {
           {Object.entries(directoryData.others).map(([category, items], i) => (
             <div key={i}>
               <p className="font-semibold mb-2">{category}</p>
-              <ul className="list-disc list-inside text-sm text-gray-700">
+              <ul className="text-md text-gray-700">
                 {items.map((item, j) => (
                   <li key={j}>{item}</li>
                 ))}
@@ -192,124 +188,124 @@ const Corporate = () => {
             </div>
           ))}
         </div>
-{/* Debenture Trustee */}
-<h2 className=" font-bold mb-4">Debenture Trustee</h2>
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 border-b border-[#c62033] pb-6">
-  {directoryData.debentureTrustees.map((trustee, i) => (
-    <div key={i}>
-      <p className="">{trustee.name}</p>
-      <div className="text-sm text-gray-700 space-y-1">
-        {trustee.address.map((line, j) => (
-          <p key={j}>{line}</p>
-        ))}
-        <p><strong></strong> {trustee.phone}</p>
-        <p>
-          <strong></strong>{" "}
-          <a href={`mailto:${trustee.email}`} className=" text-black">{trustee.email}</a>
-        </p>
-        <p>
-          <strong></strong>{" "}
-          <a href={trustee.website} target="_blank" rel="noopener noreferrer" className="underline text-black">
-            {trustee.website}
-          </a>
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-
-<div className="flex flex-col sm:flex-row gap-6 mb-6 border-b border-[#c62033] pb-6">
-  {/* Credit Rating Agencies */}
-  <div className="flex-1">
-    <h2 className="font-bold mb-4">Credit Rating Agencies</h2>
-    {directoryData.creditRatingAgencies.map((agency, i) => (
-      <div key={i} className="mb-4">
-        <p>{agency.name}</p>
-        <div className="text-sm text-gray-700 space-y-1">
-          {agency.address.map((line, j) => (
-            <p key={j}>{line}</p>
+        {/* Debenture Trustee */}
+        <h2 className=" font-bold mb-4">Debenture Trustee</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6 border-b border-[#c62033] pb-6">
+          {directoryData.debentureTrustees.map((trustee, i) => (
+            <div key={i}>
+              <p className="">{trustee.name}</p>
+              <div className="text-md text-gray-700 space-y-1">
+                {trustee.address.map((line, j) => (
+                  <p key={j}>{line}</p>
+                ))}
+                <p><strong></strong> {trustee.phone}</p>
+                <p>
+                  <strong></strong>{" "}
+                  <a href={`mailto:${trustee.email}`} className=" text-black">{trustee.email}</a>
+                </p>
+                <p>
+                  <strong></strong>{" "}
+                  <a href={trustee.website} target="_blank" rel="noopener noreferrer" className="underline text-black">
+                    {trustee.website}
+                  </a>
+                </p>
+              </div>
+            </div>
           ))}
         </div>
-      </div>
-    ))}
-  </div>
 
-  {/* Registrar & Transfer Agent */}
-  <div className="flex-1">
-    <h2 className="font-bold mb-4">Registrar & Transfer Agent</h2>
-    {directoryData.registrarAndTransferAgent.map((agent, i) => (
-      <div key={i} className="mb-4">
-        <p>{agent.name}</p>
-        <div className="text-sm text-gray-700 space-y-1">
-          {agent.address.map((line, j) => (
-            <p key={j}>{line}</p>
-          ))}
+        <div className="flex flex-col sm:flex-row gap-6 mb-6 border-b border-[#c62033] pb-6">
+          {/* Credit Rating Agencies */}
+          <div className="flex-1">
+            <h2 className="font-bold mb-4">Credit Rating Agencies</h2>
+            {directoryData.creditRatingAgencies.map((agency, i) => (
+              <div key={i} className="mb-4">
+                <p>{agency.name}</p>
+                <div className="text-md text-gray-700 space-y-1">
+                  {agency.address.map((line, j) => (
+                    <p key={j}>{line}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Registrar & Transfer Agent */}
+          <div className="flex-1">
+            <h2 className="font-bold mb-4">Registrar & Transfer Agent</h2>
+            {directoryData.registrarAndTransferAgent.map((agent, i) => (
+              <div key={i} className="mb-4">
+                <p>{agent.name}</p>
+                <div className="text-md text-gray-700 space-y-1">
+                  {agent.address.map((line, j) => (
+                    <p key={j}>{line}</p>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
-<div className="space-y-6  pb-6">
-  {/* Secretarial Auditors */}
-  <div>
-    <h2 className="font-bold">Secretarial Auditors</h2>
-    <p className="font-semibold">M/s M Damodaran & Associates LLP, Chennai</p>
-    <hr className="border-t border-[#c62033] mt-2" />
-  </div>
+        <div className="space-y-6  pb-6">
+          {/* Secretarial Auditors */}
+          <div>
+            <h2 className="font-bold">Secretarial Auditors</h2>
+            <p className="font-semibold">M/s M Damodaran & Associates LLP, Chennai</p>
+            <hr className="border-t border-[#c62033] mt-2" />
+          </div>
 
-  {/* Statutory Auditors */}
-  <div>
-    <h2 className="font-bold">Statutory Auditors</h2>
-    <p className="font-semibold">M/s S. R. Batliboi & Associates LLP Chennai</p>
-    <hr className="border-t border-[#c62033] mt-2" />
-  </div>
-</div>
+          {/* Statutory Auditors */}
+          <div>
+            <h2 className="font-bold">Statutory Auditors</h2>
+            <p className="font-semibold">M/s S. R. Batliboi & Associates LLP Chennai</p>
+            <hr className="border-t border-[#c62033] mt-2" />
+          </div>
+        </div>
 
-<div className="flex flex-col sm:flex-row gap-6 mb-6 border-b border-[#c62033] pb-6">
-  {/* Registered Office */}
-  <div className="flex-1">
-    <h2 className="font-bold mb-4">Registered Office</h2>
-    <div className="text-sm text-gray-700 space-y-1">
-      <p>SKCL Central Square 1, South and North Wing, 7th Floor</p>
-      <p>Unit # C28 - C35, CIPET Road</p>
-      <p>Thiru Vi Ka Industrial Estate</p>
-      <p>Guindy, Chennai - 600 032</p>
-      <p>CIN: U65923TN2015PLC100328</p>
-      <p>RBI Regn No: N-07.00810</p>
-    </div>
-  </div>
+        <div className="flex flex-col sm:flex-row gap-6 mb-6 border-b border-[#c62033] pb-6">
+          {/* Registered Office */}
+          <div className="flex-1">
+            <h2 className="font-bold mb-4">Registered Office</h2>
+            <div className="text-md text-gray-700 space-y-1">
+              <p>SKCL Central Square 1, South and North Wing, 7th Floor</p>
+              <p>Unit # C28 - C35, CIPET Road</p>
+              <p>Thiru Vi Ka Industrial Estate</p>
+              <p>Guindy, Chennai - 600 032</p>
+              <p>CIN: U65923TN2015PLC100328</p>
+              <p>RBI Regn No: N-07.00810</p>
+            </div>
+          </div>
 
-  {/* Contact Details */}
-  <div className="flex-1">
-    <h2 className="font-bold mb-4">Contact Details</h2>
-    <div className="text-sm text-gray-700 space-y-1">
-      <p>Phone: +91 44 4615 0011</p>
-      <p>Toll Free: 1800-202-9155</p>
-      <p>
-        Email:{" "}
-        <a href="mailto:corporate@veritasfin.in" className="text-black underline">
-          corporate@veritasfin.in
-        </a>
-      </p>
-      <p>
-        Website:{" "}
-        <a
-          href="http://www.veritasfin.in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black underline"
-        >
-          www.veritasfin.in
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
+          {/* Contact Details */}
+          <div className="flex-1">
+            <h2 className="font-bold mb-4">Contact Details</h2>
+            <div className="text-sm text-gray-700 space-y-1">
+              <p>Phone: +91 44 4615 0011</p>
+              <p>Toll Free: 1800-202-9155</p>
+              <p>
+                Email:{" "}
+                <a href="mailto:corporate@veritasfin.in" className="text-black underline">
+                  corporate@veritasfin.in
+                </a>
+              </p>
+              <p>
+                Website:{" "}
+                <a
+                  href="http://www.veritasfin.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-black underline"
+                >
+                  www.veritasfin.in
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
 
 
       </div>
-      
-      
+
+
     </div>
   );
 };

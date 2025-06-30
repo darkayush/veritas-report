@@ -19,12 +19,19 @@ const BarChart = ({ data, showPercent = false, percentValue = 0 }) => {
   const maxValue = Math.max(...data.map((item) => item.value));
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-start bg-white">
-      {/* Optional Percent Change Display */}
+    <div className="w-full flex flex-col items-center justify-start bg-white">
+      {/* Percent Change Display
+      {showPercent && percentValue !== 0 && (
+        <div className="mb-4 px-4 py-2 bg-gray-100 rounded-lg">
+          <p className="text-sm font-medium text-gray-700">
+            Change: {percentValue > 0 ? '+' : ''}{percentValue}%
+          </p>
+        </div>
+      )} */}
 
       <div
         ref={chartRef}
-        className="flex items-end justify-center h-[500px] w-full max-w-3xl px-2 gap-x-10 border-2"
+        className="flex items-end justify-center h-[400px] md:h-[500px] w-full max-w-6xl px-2 md:px-4 gap-x-2 md:gap-x-6 border-2 overflow-x-auto"
         style={{
           borderLeftColor: "#f8a219",
           borderRightColor: "#cc2d3d",
@@ -40,15 +47,16 @@ const BarChart = ({ data, showPercent = false, percentValue = 0 }) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center w-[60px] relative"
+              className="flex flex-col items-center flex-1 min-w-0 max-w-[80px] md:max-w-[100px] relative"
             >
-              {/* Value above bar */}
-              <div className="flex flex-col justify-end" style={{ height: barMaxHeight }}>
+              {/* Bar container with value inside */}
+              <div className="flex flex-col justify-end w-full" style={{ height: barMaxHeight }}>
+                {/* Gray patch with value */}
                 <div
-                  className="w-full bg-gray-200 flex items-center justify-center"
+                  className="w-full flex items-end justify-center"
                   style={{ height: grayPatchHeight }}
                 >
-                  <p className="text-sm font-semibold text-black rotate-[-90deg] whitespace-nowrap">
+                  <p className="text-xs md:text-sm font-semibold text-black md:rotate-0 whitespace-nowrap">
                     {item.value.toLocaleString()}
                   </p>
                 </div>
@@ -68,8 +76,8 @@ const BarChart = ({ data, showPercent = false, percentValue = 0 }) => {
               </div>
 
               {/* Year label */}
-              <div className="w-full h-10 mt-3 flex items-center justify-center px-2">
-                <p className="text-sm font-medium text-black whitespace-nowrap">
+              <div className="w-full h-8 md:h-10 mt-2 md:mt-3 flex items-center justify-center px-1">
+                <p className="text-xs md:text-sm font-medium text-black whitespace-nowrap text-center">
                   {item.year}
                 </p>
               </div>
@@ -82,87 +90,3 @@ const BarChart = ({ data, showPercent = false, percentValue = 0 }) => {
 };
 
 export default BarChart;
-// import React, { useState, useEffect, useRef } from "react";
-// import { motion } from "framer-motion";
-
-// const BarChart = ({ data, showPercent, percentValue }) => {
-//   const chartRef = useRef(null);
-//   const [maxBarHeight, setMaxBarHeight] = useState(0);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       if (chartRef.current) {
-//         setMaxBarHeight(chartRef.current.offsetHeight * 0.8);
-//       }
-//     };
-//     handleResize();
-//     window.addEventListener("resize", handleResize);
-//     return () => {
-//       window.removeEventListener("resize", handleResize);
-//     };
-//   }, []);
-
-//   const maxValue = Math.max(...data.map((item) => item.value));
-
-//   return (
-//     <div className="bg-[#d9ecfb] w-screen flex justify-center items-center h-[100vh]">
-//       <div
-//         ref={chartRef}
-//         className="flex flex-col h-[80vh] items-center bg-white border-2 border-[#36a2eb] w-3xl max-w-full relative"
-//       >
-    
-
-//         {/* Chart Bars */}
-//         <div className="relative w-full flex items-end justify-center max-w-6xl h-full">
-//           <div className="gap-8 flex items-end justify-center w-full">
-//             {data.map((item, index) => {
-//               const scaledHeight = (item.value / maxValue) * maxBarHeight;
-//               return (
-//                 <motion.div
-//                   key={index}
-//                   className="flex flex-col bottom-5 items-center relative group w-1/6 sm:w-1/5 md:w-1/6"
-//                   transition={{
-//                     duration: 1.2,
-//                     ease: "linear",
-//                     delay: index * 0.2,
-//                   }}
-//                   viewport={{ once: true }}
-//                 >
-//                   {/* Value */}
-//                   <p className="mb-2 text-sm font-bold text-gray-800">
-//                     {item.value}
-//                   </p>
-
-//                   {/* Bar */}
-//                   <motion.div
-//                     initial={{ height: 0 }}
-//                     whileInView={{ height: `${scaledHeight}px` }}
-//                     transition={{ duration: 1, ease: "easeInOut" }}
-//                     viewport={{ once: true }}
-//                     className="relative w-full flex items-end"
-//                   >
-//                     <div
-//                       className="w-full rounded-t-xl bg-gradient-to-t from-[#01aeef] to-[#0db152] transition-opacity duration-300 group-hover:opacity-0"
-//                       style={{ height: "100%" }}
-//                     />
-//                     <div
-//                       className="w-full rounded-t-xl bg-[#009ed7] opacity-0 transition-opacity duration-300 group-hover:opacity-100 absolute bottom-0 left-0 right-0"
-//                       style={{ height: "100%" }}
-//                     />
-//                   </motion.div>
-
-//                   {/* Year */}
-//                   <p className="mt-3 text-sm font-medium text-gray-700">
-//                     {item.year}
-//                   </p>
-//                 </motion.div>
-//               );
-//             })}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BarChart;

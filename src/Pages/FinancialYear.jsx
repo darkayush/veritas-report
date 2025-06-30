@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"; 
 import BarChart from "./BarGraph";
-// import Heading from "../Heading";
 
 const Financial_data = [
   { title: "Loan Book (Cr)", key: "RFO" },
@@ -10,7 +9,6 @@ const Financial_data = [
   { title: "Customers", key: "ROCE" },
   { title: "Branches", key: "DIVIDEND" },
   { title: "Net-worth (Cr)", key: "IndiaB" },
-  
 ];
 
 const Financial = {
@@ -63,7 +61,6 @@ const Financial = {
     { year: "FY 23-24", value: 2329.55 },
     { year: "FY 24-25", value: 2783.17 },
   ],
-  
 };
 
 export default function FinancialYear() {
@@ -83,40 +80,37 @@ export default function FinancialYear() {
   }, [selectedKey]);
 
   return (
-    <div className="px-4 overflow-hidden pt-10 md:px-10 w-screen ">
-      {/* <div className="pb-10">
-        <Heading
-          color="black"
-          title="Financial and Operational Highlights"
-          linecolor="#0072CE"
-        />
-      </div> */}
+    <div className="marginal">
+      {/* Heading */}
+      <div className="pb-6">
+        <h1 className="font-bold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-2">
+          Financial Year/ Categories
+        </h1>
+      </div>
 
       {/* Navbar Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 md:gap-6  mb-10">
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
         {Financial_data.map((item) => (
           <button
             key={item.key}
             onClick={() => setSelectedKey(item.key)}
-            className={`text-sm md:text-base px-4 py-3 rounded-lg cursor-pointer transition font-semibold whitespace-nowrap text-center min-w-[250px] max-w-xs shadow-md hover:shadow-lg ${
+            className={`text-xs md:text-sm px-3 py-2 md:px-4 md:py-3 rounded-lg cursor-pointer transition font-semibold whitespace-nowrap text-center min-w-[140px] md:min-w-[200px] max-w-xs shadow-md hover:shadow-lg ${
               selectedKey === item.key
                 ? "bg-gradient-to-br from-[#d03739] to-[#f8a11a] text-white"
                 : "border-2 border-[#d03739] text-[#d03739] bg-white"
             }`}
           >
             {item.title}
-           
           </button>
         ))}
       </div>
 
       {/* Chart Component */}
-     
       <BarChart
         data={Financial[selectedKey]}
-      
+        showPercent={percentageItemSelected}
+        percentValue={percentValue}
       />
-      
     </div>
   );
 }

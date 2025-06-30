@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import AnimatedCounter from "../common/AnimatedCounter"; // import your counter
-import { div } from "framer-motion/client";
 
 const pointerVariant = {
   hidden: { opacity: 0, y: -20 },
@@ -20,8 +19,8 @@ const Buisiness_High = () => {
   const firstRow = [
     { value: "438", label: "Branches" },
     { value: "70", label: "Service Centres" },
-    { value: "10", label: "states" },
-    { value: "1", label: "Union Territory in India, accelerating financial inclusion far and wide." },
+    { value: "10", label: "States" },
+    { value: "1", label: "Union Territory" },
   ];
 
   const pointers = [
@@ -42,13 +41,11 @@ const Buisiness_High = () => {
   const isMapInView = useInView(mapRef, { once: true });
 
   return (
-    <>
-   
-    <div className="flex flex-col lg:flex-row items-start marginal ">
+    <div className="flex flex-col lg:flex-row items-start marginal">
       {/* Left side */}
       <div className="flex-1">
         <div className="z-20 flex flex-col justify-center py-5">
-          <h1 className="font-extrabold text-2xl sm:text-4xl text-[#3c3a39] mb-4 ">
+          <h1 className="font-extrabold text-2xl sm:text-4xl text-[#3c3a39] mb-4">
             Geographic Footprint
           </h1>
           <h2 className="font-extrabold text-3xl sm:text-5xl mb-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
@@ -57,13 +54,13 @@ const Buisiness_High = () => {
           <h2 className="font-extrabold text-3xl sm:text-5xl mb-6 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] bg-clip-text text-transparent leading-tight w-fit pb-2">
             making a difference
           </h2>
-          <div className="text-2xl text-[#6c6d70]">
+          <div className="text-2xl text-[#6c6d70] mb-6">
             <h2>We operate through a network of</h2>
           </div>
         </div>
 
         {/* Business Values */}
-        <div className="flex flex-col gap-10 w-fit ">
+        <div className="flex flex-col gap-4 w-fit">
           {firstRow.map((item, index) => (
             <motion.div
               key={index}
@@ -85,19 +82,33 @@ const Buisiness_High = () => {
                 }),
               }}
             >
-              {/* Animated Counter + animated underline */}
-              <div className="font-medium text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#c9243f] to-[#f6a11d] relative w-[40%] pb-2">
-                <AnimatedCounter value={parseInt(item.value)} />
+              {/* Number and Label on same line with underline */}
+              <div className="flex items-baseline gap-3 relative pb-2">
+                <span className="font-bold text-4xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#c9243f] to-[#f6a11d]">
+                  <AnimatedCounter value={parseInt(item.value)} />
+                </span>
+                <span className="font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#c9243f] to-[#f6a11d]">{item.label}</span>
                 <motion.div
-                  className="h-1 bg-red-500 absolute bottom-0 left-0"
+                  className="h-1 bg-gradient-to-r from-[#c9243f] to-[#f6a11d] absolute bottom-0 left-0 right-0"
                   initial={{ width: 0 }}
                   whileInView={{ width: "100%" }}
                   transition={{ duration: 1.2, ease: "easeInOut", delay: 0.3 }}
                 />
               </div>
 
-              {/* Label text */}
-              <div className="text-[#6c6d70] text-2xl mt-2 w-fit">{item.label}</div>
+              {/* Connecting words below */}
+              {index < firstRow.length - 1 && (
+                <div className="text-[#6c6d70] text-xl mt-2">
+                  {index === 0 ? "and" : index === 1 ? "across" : index === 2 ? "and" : ""}
+                </div>
+              )}
+              
+              {/* Special handling for the last item */}
+              {index === firstRow.length - 1 && (
+                <div className="text-[#6c6d70] text-xl mt-2">
+                  in India, accelerating financial inclusion far and wide.
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -141,8 +152,6 @@ const Buisiness_High = () => {
         </div>
       </div>
     </div>
-   
-    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import React from "react";
 
 const teamData = [
@@ -7,7 +8,7 @@ const teamData = [
     img: "/Management/Sekar.webp"
   },
   {
-    name: "Mr. R Satish",
+    name: "Mr. R Sathish",
     role: "Senior Vice-president - Business Head - Vehicle Finance",
     img: "/Management/Sathish.webp"
   },
@@ -27,19 +28,19 @@ const teamData = [
     img: "/Management/Christoper.webp"
   },
   {
-    name:"Mr. S Parthiban",
-role:"Executive Vice-president-Chief Technology Officer",
-img:"/Management/Mr.-S-Parthiban.webp"
+    name: "Mr. S Parthiban",
+    role: "Executive Vice-president-Chief Technology Officer",
+    img: "/Management/Mr.-S-Parthiban.webp"
   },
   {
-    name:"Mr. M Mahesh",
-role:"Senior Vice-president -Treasury",
-img:"/Management/Mahesh.webp"
+    name: "Mr. M Mahesh",
+    role: "Senior Vice-president -Treasury",
+    img: "/Management/Mahesh.webp"
   },
-   {
-    name:"Mr. T E Sudharsan",
-role:"Senior Vice-president - Operations",
-img:"/Management/Mr.-T-E-Sudharsan.webp"
+  {
+    name: "Mr. T E Sudharsan",
+    role: "Senior Vice-president - Operations",
+    img: "/Management/Mr.-T-E-Sudharsan.webp"
   },
   {
     name: "Mr. Sarath Chandran Damodaran",
@@ -81,11 +82,14 @@ img:"/Management/Mr.-T-E-Sudharsan.webp"
 const ManagementTeam = () => {
   return (
     <div className="marginal">
-      <h1 className="font-semibold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-2">
-       Core Strategy Group
+      <div className="bg-[#fde9c6]">
+
+      </div>
+      <h1 className="font-bold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-2">
+        Core Strategy Group
       </h1>
-      <div className="bg-gradient-to-r bg-clip-text text-transparent font-semibold md:text-4xl text-3xl pt-2 pb-2 mb-4" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
-       Scaling Ambition with Strategic Foresight
+      <div className="bg-gradient-to-r bg-clip-text text-transparent font-bold md:text-4xl text-3xl pt-2 pb-2 mb-4 w-fit" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
+        Scaling Ambition with Strategic Foresight
       </div>
       <div className="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {teamData.map((member, index) => (
@@ -93,14 +97,14 @@ const ManagementTeam = () => {
             key={index}
             className="border-2 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border-gradient-to-br from-red-500 to-yellow-400 flex flex-col"
           >
-            <div className="w-full flex justify-center pt-4">
-             <div className="w-52 h-52 overflow-hidden rounded-md">
-  <img
-    src={member.img}
-    alt={member.name}
-    className="w-full h-full object-cover object-top"
-  />
-</div>
+            <div className="w-full flex justify-center pt-4 bg-gray-200">
+              <div className="w-60 h-60 overflow-hidden rounded-md">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
 
             </div>
             <div className="bg-gradient-to-r from-red-600 to-yellow-500 text-white text-center flex-grow flex flex-col justify-center p-4 min-h-[100px]">

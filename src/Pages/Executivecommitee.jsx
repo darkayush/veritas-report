@@ -17,13 +17,13 @@ const Executivecommitee = () => {
   {
     name:"Naveen Raj R",
     designation:"Chief Financial Officer",
-    text:"Mr. Naveen Raj R is the Chief Financial Officer of our Company. He is a highly accomplished finance professional with over 20 years of extensive experience in the financial services industry. His career includes notable tenures at some of the most prestigious firms, such as Deloitte, BSR & Co. LLP (KPMG – Audit Wing), and Five-Star Business Finance. He has proficiency spanning across diverse range of financial disciplines, including managing complex capital market transactions, analyzing and mitigating organizational risks. He is a Fellow Member of the Institute of Chartered Accountants of India (FCA) and holds a bachelor of commerce degree from the University of Madras.",
+    text:"Mr. Naveen Raj R is the Chief Financial Officer of our Company. He is a highly accomplished finance professional with over 20 years of extensive experience in the financial services industry. His career includes notable tenures at some of the most prestigious firms, such as Deloitte, BSR & Co. LLP (KPMG – Audit Wing), and Five-Star Business Finance. He has proficiency spanning across diverse range of financial disciplines, including managing complex capital market transactions, analysing and mitigating organizational risks. He is a Fellow Member of the Institute of Chartered Accountants of India (FCA) and holds a bachelor of commerce degree from the University of Madras.",
     img:"/executive/2.webp"
   },
   {
 name:"Kannan K",
     designation:"Executive Vice President & Business Head - MSME Rural",
-    text:"Mr. K. Kannan is the Senior Executive Vice President & Business Head - MSME Rural of our Company. He holds a bachelor’s degree in veterinary sciences from Tamil Nadu Veterinary and Animal Sciences University and a post graduate diploma in agri-business management from Indian Institutes of Management, Ahmedabad. Prior to joining our Company, he has been associated with Axis Bank as Assistant Vice President in Agri & Rural Banking Department and with Yes Bank Limited as Vice President. He has also been associated with Cholamandalam Investment and Finance Company Limited as Associate Vice-President & Head – Agri & Rural Finance.",
+    text:"Mr. K. Kannan is the Senior Executive Vice President & Business Head - MSME Rural of our Company. He holds a bachelor’s degree in veterinary sciences from Tamil Nadu Veterinary and Animal Sciences University and a post graduate diploma in agri-business management from Indian Institutes of Management, Ahmedabad. Prior to joining our Company, he has been associated with Axis bank as Assistant Vice President in Agri & Rural Banking Department and with Yes Bank Limited as Vice President. He has also been associated with Cholamandalam Investment and Finance Company Limited as Associate Vice- President & Head – Agri & Rural Finance.",
     img:"/executive/3.webp"
   },
   {
@@ -36,14 +36,15 @@ name:"Kannan K",
   return (
     <div className='sm:w-full marginal'>
         <div className=' max-w-6xl mx-auto my-10'>
-            <h1 className="font-semibold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-2">
+            <h1 className="font-bold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-2">
        Executive Committee
       </h1>
-      <div className="bg-gradient-to-r bg-clip-text text-transparent font-semibold md:text-4xl text-3xl pt-2 pb-2 mb-4" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
+      <div className="bg-gradient-to-r bg-clip-text text-transparent font-bold md:text-4xl text-3xl pt-2 pb-2 mb-4 w-fit" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
        Paving the path for continued progress
       </div>
-      <div className='mb-4 mt-4'>
-        <img src="/Executive_main.webp" alt="" />
+      <div className='mb-4 mt-4 p-[3px] bg-gradient-to-r from-[#ca253f] to-[#ee9129] rounded-xl'>
+        <img src="/Executive_main.webp" alt=""
+        className='rounded-lg' />
       </div>
         </div>
 {obj.map((board,index) => {

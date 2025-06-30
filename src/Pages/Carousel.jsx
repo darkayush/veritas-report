@@ -34,7 +34,7 @@ function CircleBadge({ number }) {
 
 export default function Carousel() {
   const settings = {
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     speed: 500,
