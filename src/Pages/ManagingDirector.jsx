@@ -1,6 +1,8 @@
 const ManagingDirector = () => {
   return (
     <div className="marginal">
+      <h1 className="font-bold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-10">Managing Director and CEO’s Message</h1>
+
       <div className='md:!flex justify-start items-center my-5 bg-[#c9243f] rounded-2xl'>
         <div className="md:w-[26%] relative">
           <div className="bg-white rounded-t-xl overflow-hidden pr-4 pt-2 bg-gradient-to-tl from-gray-300 to-transparent">
@@ -28,6 +30,7 @@ const ManagingDirector = () => {
           Dear Shareholders,
         </h1>
         <div className="text-[#3c3a39] font-semibold md:text-xl text-xl pt-2 pb-2 mb-4">
+          As I sit to write the
           letter for this year,
           I reflect on the
           journey of Veritas
