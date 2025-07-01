@@ -52,9 +52,9 @@
   width: auto;
 }
 
-/* Body spacing to prevent content cutting - ADD THIS TO YOUR GLOBAL CSS */
+/* Body spacing to prevent content cutting */
 body {
-  padding-top: 70px; /* Match navbar height */
+  padding-top: 70px;
 }
 
 /* Enhanced Menu Styles */
@@ -72,9 +72,12 @@ body {
 }
 
 .menu-main li > a,
-.menu-main li > button {
+.menu-main li > button,
+.menu-main li > .menu-link,
+.menu-main li > .submenu-trigger {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 12px 20px;
   text-decoration: none;
   color: #333;
@@ -86,23 +89,38 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
   white-space: nowrap;
+  width: 100%;
+  text-align: left;
 }
 
 /* DESKTOP ONLY HOVER EFFECTS */
 @media screen and (min-width: 992px) {
   .menu-main li > a:hover,
-  .menu-main li > button:hover {
+  .menu-main li > button:hover,
+  .menu-main li > .menu-link:hover,
+  .menu-main li > .submenu-trigger:hover {
     color: #c9243f;
     background: rgba(201, 36, 63, 0.05);
   }
 
+  /* Desktop specific styles */
+  .menu-main li > .submenu-trigger {
+    display: none;
+  }
+
+  .menu-main li > .menu-link {
+    display: flex;
+    pointer-events: auto;
+  }
+
   /* Dropdown arrow hover effect - DESKTOP ONLY */
-  .menu-main li:hover button svg {
+  .menu-main li:hover button svg,
+  .menu-main li:hover .menu-link svg {
     transform: rotate(180deg);
   }
 
   /* Show submenu on hover - DESKTOP ONLY */
-  .menu-item-has-children:not(.submenu-open):hover .sub-menu {
+  .menu-item-has-children:hover .sub-menu {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -126,39 +144,41 @@ body {
 
 /* Active state with gradient */
 .menu-main li.active > a,
-.menu-main li.active > button {
+.menu-main li.active > button,
+.menu-main li.active > .menu-link,
+.menu-main li.active > .submenu-trigger {
   background: linear-gradient(to right, #c9243f, #ee9228);
   color: white;
   font-weight: 600;
 }
 
 .menu-main li.active > a:hover,
-.menu-main li.active > button:hover {
+.menu-main li.active > button:hover,
+.menu-main li.active > .menu-link:hover,
+.menu-main li.active > .submenu-trigger:hover {
   background: linear-gradient(to right, #b01e35, #d4821f);
   color: white;
 }
 
 /* Dropdown arrow */
-.menu-main li button svg {
+.menu-main li button svg,
+.menu-main li .menu-link svg,
+.menu-main li .submenu-trigger svg {
   margin-left: 8px;
   font-size: 12px;
   transition: transform 0.3s ease;
 }
 
-/* Disable hover effects when submenu is actively open */
-.menu-main li.submenu-open > button {
+/* Submenu open state */
+.menu-main li.submenu-open > button,
+.menu-main li.submenu-open > .submenu-trigger {
   color: #c9243f;
   background: rgba(201, 36, 63, 0.05);
 }
 
-.menu-main li.submenu-open > button svg {
+.menu-main li.submenu-open > button svg,
+.menu-main li.submenu-open > .submenu-trigger svg {
   transform: rotate(180deg);
-}
-
-/* Disable normal hover when submenu is open */
-.menu-main li.submenu-open:hover > button {
-  color: #c9243f !important;
-  background: rgba(201, 36, 63, 0.05) !important;
 }
 
 /* Submenu Styles - DESKTOP ONLY */
@@ -179,7 +199,7 @@ body {
   display: none;
 }
 
-/* Show submenu only when active class is present */
+/* Show submenu when active */
 .sub-menu.active {
   display: block;
   opacity: 1;
@@ -325,7 +345,7 @@ body {
   color: #666;
 }
 
-/* ========== MOBILE STYLES - CLICK ONLY (NO HOVER) ========== */
+/* ========== MOBILE STYLES ========== */
 @media screen and (max-width: 991px) {
   body {
     padding-top: 60px;
@@ -374,38 +394,24 @@ body {
   }
 
   .menu-main li > a,
-  .menu-main li > button {
+  .menu-main li > .submenu-trigger {
     padding: 15px 20px;
     border-radius: 0;
     justify-content: space-between;
     width: 100%;
-    transition: none; /* Remove all transitions on mobile */
+    transition: none;
   }
 
-  /* ========== COMPLETELY DISABLE ALL HOVER EFFECTS ON MOBILE ========== */
-  .menu-main li > a:hover,
-  .menu-main li > button:hover,
-  .menu-main li > a:focus,
-  .menu-main li > button:focus {
-    color: #333 !important;
-    background: none !important;
-    transform: none !important;
+  /* Mobile specific visibility */
+  .menu-main li > .menu-link {
+    display: none;
   }
 
-  .menu-main li:hover button svg,
-  .menu-main li:focus button svg {
-    transform: none !important;
+  .menu-main li > .submenu-trigger {
+    display: flex;
   }
 
-  /* Disable hover for active states too */
-  .menu-main li.active > a:hover,
-  .menu-main li.active > button:hover {
-    background: linear-gradient(to right, #c9243f, #ee9228) !important;
-    color: white !important;
-    transform: none !important;
-  }
-
-  /* ========== MOBILE SUBMENU STYLES - CLICK ONLY ========== */
+  /* ========== MOBILE SUBMENU STYLES ========== */
   .sub-menu {
     position: static !important;
     top: auto !important;
@@ -431,19 +437,9 @@ body {
   /* Show submenu when active on mobile */
   .sub-menu.active {
     display: block !important;
-    max-height: 1000px;
-    overflow: visible;
-  }
-
-  /* ========== FORCE DISABLE ALL HOVER BEHAVIORS ON MOBILE ========== */
-  .menu-item-has-children:hover .sub-menu,
-  .menu-item-has-children:not(.submenu-open):hover .sub-menu,
-  .menu-item-has-children:focus .sub-menu {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: none !important;
-    max-height: 0 !important;
+    max-height: 70vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Mobile submenu list styles */
@@ -469,25 +465,11 @@ body {
     transition: none !important;
   }
 
-  /* ========== NO HOVER EFFECTS FOR SUBMENU ITEMS ON MOBILE ========== */
-  .sub-menu li a:hover,
-  .sub-menu li a:focus {
-    background: none !important;
-    color: #666 !important;
-    padding: 12px 30px !important;
-    transform: none !important;
-  }
-
   /* Active state for mobile submenu items */
   .sub-menu li.active a {
     background: linear-gradient(to right, #c9243f, #ee9228) !important;
     color: white !important;
     font-weight: 600 !important;
-  }
-
-  .sub-menu li.active a:hover {
-    background: linear-gradient(to right, #c9243f, #ee9228) !important;
-    color: white !important;
   }
 
   .mega-menu,
@@ -510,40 +492,46 @@ body {
     transition: none !important;
   }
 
-  /* ========== NO HOVER EFFECT FOR DOWNLOAD BUTTON ON MOBILE ========== */
+  /* ========== DISABLE ALL HOVER EFFECTS ON MOBILE ========== */
+  .menu-main li > a:hover,
+  .menu-main li > .submenu-trigger:hover,
+  .menu-main li > a:focus,
+  .menu-main li > .submenu-trigger:focus,
+  .sub-menu li a:hover,
+  .sub-menu li a:focus,
   .download-btn:hover,
   .download-btn:focus {
-    background: linear-gradient(to right, #c9243f, #ee9228) !important;
+    color: inherit !important;
+    background: inherit !important;
     transform: none !important;
-    box-shadow: 0 4px 15px rgba(201, 36, 63, 0.3) !important;
+    padding: inherit !important;
+  }
+
+  /* Keep active states working */
+  .menu-main li.active > a,
+  .menu-main li.active > .submenu-trigger {
+    background: linear-gradient(to right, #c9243f, #ee9228) !important;
     color: white !important;
+  }
+
+  .menu-main li.submenu-open > .submenu-trigger {
+    color: #c9243f !important;
+    background: rgba(201, 36, 63, 0.05) !important;
+  }
+
+  .menu-main li.submenu-open > .submenu-trigger svg {
+    transform: rotate(180deg) !important;
   }
 
   /* ========== DISABLE TOUCH HOVER STATES ========== */
   @media (hover: none) and (pointer: coarse) {
     .menu-main li > a:hover,
-    .menu-main li > button:hover,
+    .menu-main li > .submenu-trigger:hover,
     .sub-menu li a:hover,
     .download-btn:hover {
       background: none !important;
       color: inherit !important;
       transform: none !important;
-    }
-
-    .menu-main li.active > a,
-    .menu-main li.active > button {
-      background: linear-gradient(to right, #c9243f, #ee9228) !important;
-      color: white !important;
-    }
-
-    .sub-menu li.active a {
-      background: linear-gradient(to right, #c9243f, #ee9228) !important;
-      color: white !important;
-    }
-
-    .download-btn {
-      background: linear-gradient(to right, #c9243f, #ee9228) !important;
-      color: white !important;
     }
   }
 }
@@ -562,21 +550,11 @@ body {
   }
 }
 
-/* Utility classes for responsive design */
+/* Utility classes */
 .block {
   display: block !important;
 }
 
 .hidden {
   display: none !important;
-}
-
-@media screen and (min-width: 640px) {
-  .sm\:hidden {
-    display: none !important;
-  }
-  
-  .sm\:flex-row {
-    flex-direction: row !important;
-  }
 }
