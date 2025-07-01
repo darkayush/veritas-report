@@ -10,8 +10,8 @@ const ManagingDirector = () => {
           </div>
           <div className="absolute bottom-0 left-0 w-full h-[4px] bg-gradient-to-r from-[#c9243f] to-[#f6a11d] rounded-b-xl"></div>
         </div>
-        <div className='md:w-[56%] pl-10'>
-          <p className='md:text-xl text-white font-semibold md:w-[95%]'>
+        <div className='pl-10'>
+          <p className='md:text-xl text-white font-semibold '>
             "Our Loan book
             grew by 28.39% to
             INR 7,349 Crores, driven
