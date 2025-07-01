@@ -3,8 +3,8 @@ import Buisiness_High from '../Components/Buisiness/Buisiness_High';
 const BusinessHighlights = () => {
   const allItems = [
     { value: "1557.40", label: "Total Revenue", showCrores: true },
-    { value: "292.19", label: "Profit After Tax (PAT)", showCrores: true },
-    { value: "7348.64", label: "Loan Assets Under Management (AUM)", showCrores: true },
+    { value: "295.11", label: "Profit After Tax (PAT)", showCrores: true },
+    { value: "7348.64", label: "Loan Book", showCrores: true },
     { value: "11.52", label: "Return on Equity (%)" },
     { value: "438", label: "Branch Network" },
     { value: "7796", label: "Employees" },
