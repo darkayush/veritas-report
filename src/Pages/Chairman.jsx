@@ -84,6 +84,7 @@ const Chairman = () => {
             small loans, home loans and vehicle
             loans, among others.
             <br />
+            <br />
             FY 2025 has seen us reinforce these
             values by expanding our reach across
             rural and semi-urban India, tailoring
@@ -114,16 +115,16 @@ const Chairman = () => {
             states and 1 union territory, powered by
             a purpose and passion-driven, strong
             employee base that is committed
-            to our mission.</p>
-            <p className="mb-2">
-              Our profitability has remained robust, with
-              Profit After Tax reaching INR 295 crores,
-              while asset quality and compliance
-              standards have only improved. This
-              performance reflects the strategic and
-              operational maturity Veritas has achieved
-              over the past ten years.
-            </p>
+            to our mission.
+            <br />
+            <br />
+            Our profitability has remained robust, with
+            Profit After Tax reaching INR 295 crores,
+            while asset quality and compliance
+            standards have only improved. This
+            performance reflects the strategic and
+            operational maturity Veritas has achieved
+            over the past ten years.</p>
           </div>
         </div>
         <div className='mb-3'>
@@ -151,52 +152,53 @@ const Chairman = () => {
             is well recognised by Veritas, which the
             Company will seek to address through
             a clarity of purpose, strategic vision and
-            consistency in execution.</p>
-            <p className="mb-2">
-              As an organization, we remain deeply
-              committed to fostering gender diversity
-              and inclusivity – both within Veritas
-              and across the communities we serve.
-              We believe that empowering women
-              and underrepresented groups is vital
-              to driving sustained inclusive economic
-              progress. While as at March 31, 2025,
-              women borrowers hold around 14 % of
-              our total loan portfolio, our ‘Dhanasakthi’ loan product launched exclusively for
-              women in November 2023, stands as
-              a fitting testament to this commitment.
-              Since its roll-out, more than 2,000
-              deserving women entrepreneurs
-              have been granted Working Capital
-              facilities enabling them to gain financial
-              independence and build resilient
-              businesses. In parallel, we are also
-              increasingly focused on embedding
-              climate-conscious practices into our
-              operations and lending approach. As
-              we look ahead, green lending and
-              environmentally responsible financing
-              will be integral to our strategy as we align
-              growth with sustainability and resilience.
-            </p>
-            <p className="mb-2">
-              At Veritas, we are building for the
-              long term. Our strategic priorities are
-              anchored in achieving the right balance
-              between scale and control, growth
-              and governance, and innovation and
-              stability. We are focused on broadening
-              our product portfolio, deepening our
-              distribution reach, and strengthening
-              our institutional capabilities in a way that
-              allows us to stay agile in a dynamic and
-              ever-evolving environment. We are also
-              in the process of formalising our ESG
-              roadmap, as we believe sustainability
-              and stakeholder accountability will
-              increasingly define the success of
-              financial institutions in the years to come.
-            </p>
+            consistency in execution.
+            <br />
+            <br />
+            As an organization, we remain deeply
+            committed to fostering gender diversity
+            and inclusivity – both within Veritas
+            and across the communities we serve.
+            We believe that empowering women
+            and underrepresented groups is vital
+            to driving sustained inclusive economic
+            progress. While as at March 31, 2025,
+            women borrowers hold around 14 % of
+            our total loan portfolio, our ‘Dhanasakthi’ loan product launched exclusively for
+            women in November 2023, stands as
+            a fitting testament to this commitment.
+            Since its roll-out, more than 2,000
+            deserving women entrepreneurs
+            have been granted Working Capital
+            facilities enabling them to gain financial
+            independence and build resilient
+            businesses. In parallel, we are also
+            increasingly focused on embedding
+            climate-conscious practices into our
+            operations and lending approach. As
+            we look ahead, green lending and
+            environmentally responsible financing
+            will be integral to our strategy as we align
+            growth with sustainability and resilience.
+            <br />
+            <br />
+            At Veritas, we are building for the
+            long term. Our strategic priorities are
+            anchored in achieving the right balance
+            between scale and control, growth
+            and governance, and innovation and
+            stability. We are focused on broadening
+            our product portfolio, deepening our
+            distribution reach, and strengthening
+            our institutional capabilities in a way that
+            allows us to stay agile in a dynamic and
+            ever-evolving environment. We are also
+            in the process of formalising our ESG
+            roadmap, as we believe sustainability
+            and stakeholder accountability will
+            increasingly define the success of
+            financial institutions in the years to come.
+          </p>
           </div>
         </div>
         <div className='mb-3'>
@@ -212,8 +214,8 @@ const Chairman = () => {
               resolute in our commitment to delivering
               value through financial inclusion and
               institutional integrity.
-            </p>
-            <p className="mb-2">
+              <br />
+              <br />
               Together, let’s keep building not just a
               profitable enterprise, but a purposeful
               one—an institution rooted in resilience,

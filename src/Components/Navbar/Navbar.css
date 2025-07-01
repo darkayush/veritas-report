@@ -88,10 +88,40 @@ body {
   white-space: nowrap;
 }
 
-.menu-main li > a:hover,
-.menu-main li > button:hover {
-  color: #c9243f;
-  background: rgba(201, 36, 63, 0.05);
+/* DESKTOP ONLY HOVER EFFECTS */
+@media screen and (min-width: 992px) {
+  .menu-main li > a:hover,
+  .menu-main li > button:hover {
+    color: #c9243f;
+    background: rgba(201, 36, 63, 0.05);
+  }
+
+  /* Dropdown arrow hover effect - DESKTOP ONLY */
+  .menu-main li:hover button svg {
+    transform: rotate(180deg);
+  }
+
+  /* Show submenu on hover - DESKTOP ONLY */
+  .menu-item-has-children:not(.submenu-open):hover .sub-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Submenu hover effects - DESKTOP ONLY */
+  .sub-menu li a:hover {
+    background: linear-gradient(to right, rgba(201, 36, 63, 0.1), rgba(238, 146, 40, 0.1));
+    color: #c9243f;
+    padding-left: 25px;
+  }
+
+  .download-btn:hover {
+    background: linear-gradient(to right, #b01e35, #d4821f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 36, 63, 0.4);
+    color: white;
+  }
 }
 
 /* Active state with gradient */
@@ -113,11 +143,6 @@ body {
   margin-left: 8px;
   font-size: 12px;
   transition: transform 0.3s ease;
-}
-
-/* Normal hover behavior for dropdown arrow */
-.menu-main li:hover button svg {
-  transform: rotate(180deg);
 }
 
 /* Disable hover effects when submenu is actively open */
@@ -162,22 +187,6 @@ body {
   transform: translateY(0);
 }
 
-/* Disable default hover behavior for submenus */
-.menu-item-has-children:hover .sub-menu {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-}
-
-/* Only show on hover if not actively controlled by state */
-.menu-item-has-children:not(.submenu-open):hover .sub-menu {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
 .sub-menu ul {
   list-style: none;
   margin: 0;
@@ -196,12 +205,6 @@ body {
   font-size: 14px;
   transition: all 0.3s ease;
   border-radius: 0;
-}
-
-.sub-menu li a:hover {
-  background: linear-gradient(to right, rgba(201, 36, 63, 0.1), rgba(238, 146, 40, 0.1));
-  color: #c9243f;
-  padding-left: 25px;
 }
 
 .sub-menu li.active a {
@@ -229,7 +232,7 @@ body {
   margin-bottom: 5px;
 }
 
-/* Enhanced Download Button - Removed FontAwesome icon */
+/* Enhanced Download Button */
 .download-btn {
   display: flex;
   align-items: center;
@@ -243,13 +246,6 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(201, 36, 63, 0.3);
-}
-
-.download-btn:hover {
-  background: linear-gradient(to right, #b01e35, #d4821f);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201, 36, 63, 0.4);
-  color: white;
 }
 
 .download-text {
@@ -302,25 +298,6 @@ body {
   transform: translateY(8px);
 }
 
-/* Menu Overlay */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 99;
-}
-
-.menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
 /* Mobile Menu Head */
 .mobile-menu-head {
   display: none;
@@ -348,10 +325,10 @@ body {
   color: #666;
 }
 
-/* Responsive Design */
+/* ========== MOBILE STYLES - CLICK ONLY (NO HOVER) ========== */
 @media screen and (max-width: 991px) {
   body {
-    padding-top: 60px; /* Adjust for mobile navbar height */
+    padding-top: 60px;
   }
 
   .row {
@@ -402,9 +379,33 @@ body {
     border-radius: 0;
     justify-content: space-between;
     width: 100%;
+    transition: none; /* Remove all transitions on mobile */
   }
 
-  /* MOBILE SUBMENU STYLES - COMPLETELY FIXED */
+  /* ========== COMPLETELY DISABLE ALL HOVER EFFECTS ON MOBILE ========== */
+  .menu-main li > a:hover,
+  .menu-main li > button:hover,
+  .menu-main li > a:focus,
+  .menu-main li > button:focus {
+    color: #333 !important;
+    background: none !important;
+    transform: none !important;
+  }
+
+  .menu-main li:hover button svg,
+  .menu-main li:focus button svg {
+    transform: none !important;
+  }
+
+  /* Disable hover for active states too */
+  .menu-main li.active > a:hover,
+  .menu-main li.active > button:hover {
+    background: linear-gradient(to right, #c9243f, #ee9228) !important;
+    color: white !important;
+    transform: none !important;
+  }
+
+  /* ========== MOBILE SUBMENU STYLES - CLICK ONLY ========== */
   .sub-menu {
     position: static !important;
     top: auto !important;
@@ -434,13 +435,14 @@ body {
     overflow: visible;
   }
 
-  /* Completely disable all hover effects on mobile */
+  /* ========== FORCE DISABLE ALL HOVER BEHAVIORS ON MOBILE ========== */
   .menu-item-has-children:hover .sub-menu,
-  .menu-item-has-children:not(.submenu-open):hover .sub-menu {
+  .menu-item-has-children:not(.submenu-open):hover .sub-menu,
+  .menu-item-has-children:focus .sub-menu {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
-    transform: translateY(-10px) !important;
+    transform: none !important;
     max-height: 0 !important;
   }
 
@@ -464,18 +466,28 @@ body {
     color: #666 !important;
     font-size: 14px !important;
     border-radius: 0 !important;
+    transition: none !important;
   }
 
-  .sub-menu li a:hover {
-    background: #e9ecef !important;
-    color: #c9243f !important;
-    padding-left: 35px !important;
+  /* ========== NO HOVER EFFECTS FOR SUBMENU ITEMS ON MOBILE ========== */
+  .sub-menu li a:hover,
+  .sub-menu li a:focus {
+    background: none !important;
+    color: #666 !important;
+    padding: 12px 30px !important;
+    transform: none !important;
   }
 
+  /* Active state for mobile submenu items */
   .sub-menu li.active a {
     background: linear-gradient(to right, #c9243f, #ee9228) !important;
     color: white !important;
     font-weight: 600 !important;
+  }
+
+  .sub-menu li.active a:hover {
+    background: linear-gradient(to right, #c9243f, #ee9228) !important;
+    color: white !important;
   }
 
   .mega-menu,
@@ -495,6 +507,44 @@ body {
   .download-btn {
     padding: 8px 12px;
     min-width: auto;
+    transition: none !important;
+  }
+
+  /* ========== NO HOVER EFFECT FOR DOWNLOAD BUTTON ON MOBILE ========== */
+  .download-btn:hover,
+  .download-btn:focus {
+    background: linear-gradient(to right, #c9243f, #ee9228) !important;
+    transform: none !important;
+    box-shadow: 0 4px 15px rgba(201, 36, 63, 0.3) !important;
+    color: white !important;
+  }
+
+  /* ========== DISABLE TOUCH HOVER STATES ========== */
+  @media (hover: none) and (pointer: coarse) {
+    .menu-main li > a:hover,
+    .menu-main li > button:hover,
+    .sub-menu li a:hover,
+    .download-btn:hover {
+      background: none !important;
+      color: inherit !important;
+      transform: none !important;
+    }
+
+    .menu-main li.active > a,
+    .menu-main li.active > button {
+      background: linear-gradient(to right, #c9243f, #ee9228) !important;
+      color: white !important;
+    }
+
+    .sub-menu li.active a {
+      background: linear-gradient(to right, #c9243f, #ee9228) !important;
+      color: white !important;
+    }
+
+    .download-btn {
+      background: linear-gradient(to right, #c9243f, #ee9228) !important;
+      color: white !important;
+    }
   }
 }
 

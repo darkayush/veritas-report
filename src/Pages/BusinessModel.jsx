@@ -15,7 +15,7 @@ const BusinessModel = () => {
         >
           Innovative solutions and technology integration
         </div>
-        <div className=" text-xl pt-2 mb-4">
+        <div className=" text-xl mb-4 font-semibold">
           As we mark a decade of dedicated service, we continue to harness the power of
           technology to transform lending for India’s micro and small enterprises. Our digitally driven
           and data-backed operating model is integral to our growth strategy, enabling scalable

@@ -31,7 +31,7 @@ const CSR = () => {
       <div className="bg-gradient-to-r bg-clip-text text-transparent font-bold md:text-4xl text-3xl pt-2 pb-2 mb-4 w-fit" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
         Committed to Meaningful Change
       </div>
-      <div className=" text-xl pt-2 mb-4">
+      <div className=" text-xl pt-2 mb-5 font-semibold">
         At Veritas Foundation, we believe that true progress lies in building a stronger, more
         equitable society. Our CSR efforts continue to focus on education, empowerment and
         infrastructure, creating environments where individuals and communities can thrive.

@@ -10,7 +10,7 @@ const Competitive = () => {
         <div className="bg-gradient-to-r bg-clip-text text-transparent font-bold md:text-4xl text-3xl pt-2 pb-2 mb-4 w-fit" style={{ backgroundImage: 'linear-gradient(to right, #c9243f, #ee9228)' }}>
           Staying ahead of the curve
         </div>
-        <div className=" text-xl pt-2 mb-4">
+        <div className=" text-xl font-semibold">
           Over the past decade, Veritas Finance has built a robust foundation anchored in
           trust, customer centricity and a deep understanding of MSME lending. Our core
           strengths continue to evolve, helping us deliver tailored retail credit solutions,

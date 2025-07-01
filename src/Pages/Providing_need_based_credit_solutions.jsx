@@ -12,6 +12,8 @@ const ProvidingNeedBasedCreditSolutions = () => {
                     based credit solutions that help micro
                     businesses scale their operations and
                     geographic presence.
+                    <br />
+                    <br />
                     Our offerings help borrowers in the
                     unorganised sector access working
                     capital, expand operations and create
@@ -20,6 +22,8 @@ const ProvidingNeedBasedCreditSolutions = () => {
                     of engagement and support at every
                     step of the credit journey, right from loan
                     origination to disbursal and repayment.
+                    <br />
+                    <br />
                     Sound credit assessment processes,
                     quick turnaround times and flexible
                     repayment options position us as a
@@ -35,7 +39,7 @@ const ProvidingNeedBasedCreditSolutions = () => {
                             <div className=''>
                                 <img className='w-16' src="/veritas_icons/Vision.webp" alt="" />
                             </div>
-                            <div>
+                            <div className='lg:mt-3.5'>
                                 <h1 className='text-xl text-[#c9243f] mb-2 font-semibold'>Vision</h1>
                                 <div className=''>
                                     To be recognised by our fairness,
@@ -78,14 +82,13 @@ const ProvidingNeedBasedCreditSolutions = () => {
                         </div>
                     </div>
                 </div>
-                <div className='text-2xl bg-gradient-to-r from-[#c9243f] to-[#faa619] text-transparent bg-clip-text font-extrabold mb-6>
-'>
+                <div className='text-2xl bg-gradient-to-r from-[#c9243f] to-[#faa619] text-transparent bg-clip-text font-extrabold mb-6 w-fit'>
                     HIGHLIGHTS THAT
                     REFLECT OUR IMPACT
                 </div>
                 <div className='p-4 bg-[#ffe1b7] border border-[#c9243f] mb-4 mt-2 rounded-3xl '>
                     <div className=''>
-                        AAs of March 31, 2025, our
+                        As of March 31, 2025, our
                         Loan book aggregated to
                         <span className='text-black font-bold text-xl'> INR 7, 349 </span>Crores
                         across our various products.

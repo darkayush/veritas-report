@@ -96,7 +96,7 @@ const Award = () => {
             )}
 
             {/* Highlighted text */}
-            <p className="text-sm">
+            <p className="text-lg">
               {award.text.split(/\$(.*?)\$/g).map((segment, i) => {
                 const isHighlighted = i % 2 === 1;
                 return (

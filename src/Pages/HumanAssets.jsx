@@ -32,7 +32,7 @@ const HumanAssets = () => {
           Driving transformation with a
           people-first strategy
         </div>
-        <div className=" text-xl pt-2 mb-4">
+        <div className=" text-xl pt-2 mb-4 font-semibold">
           Our human assets remain at the heart of everything we do. Over
           the years, we have built a diverse, skilled and passionate workforce
           dedicated to supporting India's micro and small businesses.
@@ -80,6 +80,7 @@ const HumanAssets = () => {
             using practical, on-ground indicators such
             as inventory levels, customer footfall and
             transaction patterns.
+            <br />
             To ensure future-readiness, we also
             invest in the continuous development
             of our mid-level and senior employees
@@ -223,9 +224,6 @@ const HumanAssets = () => {
               aids across branches to raise awareness
               about employee benefits, policies and
               workplace updates.
-            </div>
-            <div className='md:w-[50%]'>
-              <img src="/Asset_man.webp" alt="" />
             </div>
           </div>
         </div>

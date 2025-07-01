@@ -56,8 +56,8 @@ const ManagingDirector = () => {
               impacted over 200000 customers.
               An idea that is now shared by over
               7700 employees.
-            </p>
-            <p className="mb-2">
+              <br />
+              <br />
               Guided by our eminent board, supported
               by marquee investors and lenders, Veritas
               over the last ten years has meticulously
@@ -118,8 +118,8 @@ const ManagingDirector = () => {
                   stability in the last quarter, we are yet to
                   see definitive signals of the strong revival
                   of the economy.
-                </p>
-                <p className="mb-2">
+                  <br />
+                  <br />
                   Despite a difficult environment, I am
                   happy to convey that your Company
                   has delivered a strong and broad-based
@@ -135,8 +135,8 @@ const ManagingDirector = () => {
                   significant increase from 1.76 lakhs last
                   year, highlighting our growing relevance
                   among microenterprise borrowers.
-                </p>
-                <p className="mb-2">
+                  <br />
+                  <br />
                   While our secured business loan and
                   affordable housing loan segment
                   continued to show resilient portfolio
@@ -153,8 +153,20 @@ const ManagingDirector = () => {
                   product offering and are confident that
                   we will see a significant turnaround in this
                   segment in the coming months.
-                </p>
-                <p className="mb-2">
+                  <br />
+                  <br />
+                  While our used commercial vehicle loan
+                  segment has been resilient, we have
+                  witnessed a decline in customer
+                  satisfaction. This is mainly driven by
+                  the high cost of ownership and
+                  maintenance of vehicles. We have
+                  therefore launched a new segment –
+                  Used Commercial Vehicle Loan – which
+                  offers lower interest rates and
+                  competitive terms.
+                  <br />
+                  <br />
                   I am also delighted to report that used
                   commercial vehicle loans completed one
                   full year of operations and continued to
@@ -166,7 +178,6 @@ const ManagingDirector = () => {
                   established will help us build a strong
                   portfolio in coming months.
                 </p>
-
               </div>
             </div>
           </div>
@@ -189,8 +200,8 @@ const ManagingDirector = () => {
               loan collections processed via UPI,
               e-NACH or dynamic QR codes, improving
               turnaround times and service quality.
-            </p>
-            <p className="mb-2">
+              <br />
+              <br />
               Additionally, we equipped our teams
               with real-time dashboards to monitor key
               performance metrics such as collection
@@ -217,8 +228,8 @@ const ManagingDirector = () => {
               diversified Company, admired for its
               values, resilience and contribution to
               India’s economy.
-            </p>
-            <p className="mb-2">
+              <br />
+              <br />
               Our growth strategy remains anchored
               in five strategic pillars: expanding in
               underpenetrated markets with controlled
@@ -227,10 +238,8 @@ const ManagingDirector = () => {
               affordable Housing Loans and used
               commercial vehicle loans; investing in
               people through a value-driven culture;
-
               embedding technology and data-
               led processes across origination and
-
               collections to boost productivity; and
               forging strong partnerships to optimize
               our funding mix. These priorities reflect
@@ -277,8 +286,8 @@ const ManagingDirector = () => {
               environmental stewardship, underscores
               our commitment to building a responsible
               and resilient financial institution.
-            </p>
-            <p className="mb-2">
+              <br />
+              <br />
               I am grateful to our employees, Board,
               investors, customers, lenders, and
               regulatory partners. Your unwavering

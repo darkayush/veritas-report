@@ -11,7 +11,7 @@ const FinancialSolutions = () => {
                         across the decade
                   </div>
 
-                  <div className=" text-xl pt-2 mb-4">
+                  <div className=" text-xl pt-2 mb-4 font-semibold">
                         We offer an array of loans targeting different income groups to accelerate
                         financial inclusion and bring more people into the economic mainstream.
                   </div>

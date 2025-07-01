@@ -8,18 +8,72 @@ const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [currentMenuTitle, setCurrentMenuTitle] = useState("");
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const location = useLocation();
   const navRef = useRef(null);
+  const hoverTimeoutRef = useRef(null);
+
+  // Better mobile detection
+  const checkIsMobile = () => {
+    const isMobile = window.innerWidth <= 991;
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    return isMobile || isTouchDevice;
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = checkIsMobile();
+      setIsMobileDevice(mobile);
+      
+      // Close mobile menu when switching to desktop
+      if (!mobile && menuActive) {
+        setMenuActive(false);
+        setActiveSubmenu(null);
+        setCurrentMenuTitle("");
+      }
+    };
+
+    // Initial check
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [menuActive]);
 
   const toggleMenu = () => {
-    setMenuActive((prev) => !prev);
+    setMenuActive(prev => !prev);
     setActiveSubmenu(null);
     setCurrentMenuTitle("");
   };
 
-  const handleSubmenuOpen = (title, key) => {
-    setCurrentMenuTitle(title);
-    setActiveSubmenu(activeSubmenu === key ? null : key);
+  // Mobile me sirf click events handle karenge
+  const handleMobileSubmenuClick = (title, key, event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    if (isMobileDevice) {
+      setCurrentMenuTitle(title);
+      setActiveSubmenu(activeSubmenu === key ? null : key);
+    }
+  };
+
+  // Desktop me sirf hover events handle karenge
+  const handleDesktopSubmenuMouseEnter = (key) => {
+    if (!isMobileDevice) {
+      // Clear any pending close timeout
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+        hoverTimeoutRef.current = null;
+      }
+      setActiveSubmenu(key);
+    }
+  };
+
+  const handleDesktopSubmenuMouseLeave = () => {
+    if (!isMobileDevice) {
+      hoverTimeoutRef.current = setTimeout(() => {
+        setActiveSubmenu(null);
+      }, 150);
+    }
   };
 
   const handleGoBack = () => {
@@ -28,18 +82,32 @@ const Navbar = () => {
   };
 
   const handleLinkClick = () => {
-    // Auto-close menu and submenu on link click (especially on mobile)
     setMenuActive(false);
     setActiveSubmenu(null);
     setCurrentMenuTitle("");
+    
+    // Clear any pending timeout
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
   };
 
-  // Function to check if current path matches the menu item
-  const isActiveRoute = (path) => {
-    return location.pathname === path;
-  };
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileDevice) {
+      document.body.style.overflow = menuActive ? "hidden" : "unset";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuActive, isMobileDevice]);
 
-  // Function to check if current path is under a submenu
+  const isActiveRoute = (path) => location.pathname === path;
+
   const isSubmenuActive = (submenuKey) => {
     if (submenuKey === 'corporate') {
       return location.pathname.startsWith('/corporate-overview/');
@@ -47,53 +115,54 @@ const Navbar = () => {
     return false;
   };
 
-  // Handle clicks outside of navbar to close menus
+  // Handle outside clicks (desktop only)
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navRef.current && !navRef.current.contains(event.target)) {
-        setMenuActive(false);
+    const handleClickOutside = (e) => {
+      if (!isMobileDevice && navRef.current && !navRef.current.contains(e.target)) {
         setActiveSubmenu(null);
         setCurrentMenuTitle("");
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMobileDevice]);
 
+  // Auto-close menu on route change
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 991 && menuActive) {
-        toggleMenu();
+    handleLinkClick();
+  }, [location.pathname]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
       }
     };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [menuActive]);
+  }, []);
 
   return (
     <header className="header" ref={navRef}>
       <div className="container">
         <div className="row v-center">
+          {/* Logo */}
           <div className="header-item item-left">
             <div className="logo">
               <a href="https://www.veritasfin.in/" target="_blank" rel="noopener noreferrer">
-                <img src="/home/v_logo.png" alt="Company logo"
-                className="" />
+                <img src="/home/v_logo.png" alt="Company logo" />
               </a>
             </div>
           </div>
 
-          <div className="header-item item-center">
-            <div className={`menu-overlay ${menuActive ? "active" : ""}`} onClick={toggleMenu}></div>
-            <nav className={`menu ${menuActive ? "active" : ""}`} aria-label="Main menu">
-              <div className="mobile-menu-head sm:hidden">
+          {/* Navigation */}
+          <div className={`header-item item-center ${menuActive ? "active" : ""}`}>
+            <nav className="menu" aria-label="Main menu">
+              <div className="mobile-menu-head">
                 <div className={`go-back ${activeSubmenu ? "block" : "hidden"}`} onClick={handleGoBack}>
                   <FontAwesomeIcon icon={faAngleLeft} />
                 </div>
-                <div className="current-menu-title">{currentMenuTitle}</div>
+                <div className="current-menu-title">{currentMenuTitle || "Menu"}</div>
                 <div className="mobile-menu-close" onClick={toggleMenu}>&times;</div>
               </div>
 
@@ -103,11 +172,33 @@ const Navbar = () => {
                 </li>
 
                 {/* Corporate Overview */}
-                <li className={`menu-item-has-children ${isSubmenuActive('corporate') ? 'active' : ''} ${activeSubmenu === 'corporate' ? 'submenu-open' : ''}`}>
-                  <button onClick={() => handleSubmenuOpen("Corporate Overview", "corporate")}>
+                <li 
+                  className={`menu-item-has-children ${isSubmenuActive('corporate') ? 'active' : ''} ${activeSubmenu === 'corporate' ? 'submenu-open' : ''}`}
+                  // Desktop me hover events sirf yahan lagenge
+                  {...(!isMobileDevice && {
+                    onMouseEnter: () => handleDesktopSubmenuMouseEnter("corporate"),
+                    onMouseLeave: handleDesktopSubmenuMouseLeave
+                  })}
+                >
+                  <button 
+                    // Mobile me sirf click event
+                    onClick={(e) => isMobileDevice ? handleMobileSubmenuClick("Corporate Overview", "corporate", e) : undefined}
+                  >
                     Corporate Overview <FontAwesomeIcon icon={faAngleDown} />
                   </button>
-                  <div className={`sub-menu mega-menu mega-menu-column-2 ${activeSubmenu === "corporate" ? "active" : ""}`}>
+                  <div 
+                    className={`sub-menu mega-menu mega-menu-column-2 ${activeSubmenu === "corporate" ? "active" : ""}`}
+                    // Desktop me submenu ke liye hover events
+                    {...(!isMobileDevice && {
+                      onMouseEnter: () => {
+                        if (hoverTimeoutRef.current) {
+                          clearTimeout(hoverTimeoutRef.current);
+                          hoverTimeoutRef.current = null;
+                        }
+                      },
+                      onMouseLeave: handleDesktopSubmenuMouseLeave
+                    })}
+                  >
                     <div className="list-item">
                       <ul>
                         {[
@@ -142,11 +233,30 @@ const Navbar = () => {
                 </li>
 
                 {/* Statutory Reports */}
-                <li className={`menu-item-has-children ${activeSubmenu === 'reports' ? 'submenu-open' : ''}`}>
-                  <button onClick={() => handleSubmenuOpen("Statutory Reports", "reports")}>
+                <li 
+                  className={`menu-item-has-children ${activeSubmenu === 'reports' ? 'submenu-open' : ''}`}
+                  {...(!isMobileDevice && {
+                    onMouseEnter: () => handleDesktopSubmenuMouseEnter("reports"),
+                    onMouseLeave: handleDesktopSubmenuMouseLeave
+                  })}
+                >
+                  <button 
+                    onClick={(e) => isMobileDevice ? handleMobileSubmenuClick("Statutory Reports", "reports", e) : undefined}
+                  >
                     Statutory Reports <FontAwesomeIcon icon={faAngleDown} />
                   </button>
-                  <div className={`sub-menu single-column-menu ${activeSubmenu === "reports" ? "active" : ""}`}>
+                  <div 
+                    className={`sub-menu single-column-menu ${activeSubmenu === "reports" ? "active" : ""}`}
+                    {...(!isMobileDevice && {
+                      onMouseEnter: () => {
+                        if (hoverTimeoutRef.current) {
+                          clearTimeout(hoverTimeoutRef.current);
+                          hoverTimeoutRef.current = null;
+                        }
+                      },
+                      onMouseLeave: handleDesktopSubmenuMouseLeave
+                    })}
+                  >
                     <ul>
                       {[
                         ["Board_Report", "Board's Report"],
@@ -166,11 +276,30 @@ const Navbar = () => {
                 </li>
 
                 {/* Financial Statements */}
-                <li className={`menu-item-has-children ${activeSubmenu === 'financial' ? 'submenu-open' : ''}`}>
-                  <button onClick={() => handleSubmenuOpen("Financial Statements", "financial")}>
+                <li 
+                  className={`menu-item-has-children ${activeSubmenu === 'financial' ? 'submenu-open' : ''}`}
+                  {...(!isMobileDevice && {
+                    onMouseEnter: () => handleDesktopSubmenuMouseEnter("financial"),
+                    onMouseLeave: handleDesktopSubmenuMouseLeave
+                  })}
+                >
+                  <button 
+                    onClick={(e) => isMobileDevice ? handleMobileSubmenuClick("Financial Statements", "financial", e) : undefined}
+                  >
                     Financial Statements <FontAwesomeIcon icon={faAngleDown} />
                   </button>
-                  <div className={`sub-menu single-column-menu ${activeSubmenu === "financial" ? "active" : ""}`}>
+                  <div 
+                    className={`sub-menu single-column-menu ${activeSubmenu === "financial" ? "active" : ""}`}
+                    {...(!isMobileDevice && {
+                      onMouseEnter: () => {
+                        if (hoverTimeoutRef.current) {
+                          clearTimeout(hoverTimeoutRef.current);
+                          hoverTimeoutRef.current = null;
+                        }
+                      },
+                      onMouseLeave: handleDesktopSubmenuMouseLeave
+                    })}
+                  >
                     <ul>
                       <li><a href="/docs/Independent_Auditor.pdf" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Independent Auditor</a></li>
                       <li><a href="/docs/Financial_Statements.pdf" target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>Financial Statements</a></li>
@@ -181,7 +310,7 @@ const Navbar = () => {
             </nav>
           </div>
 
-          {/* Right side Download Button */}
+          {/* Right Section (Download Button + Mobile Trigger) */}
           <div className="header-item item-right">
             <a 
               href="/docs/Veritas_Finance_Private_Limited_AR_2024-25.pdf" 

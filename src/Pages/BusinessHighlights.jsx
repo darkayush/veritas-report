@@ -11,7 +11,7 @@ const BusinessHighlights = () => {
   ];
   return (
     <>
-      <div className="marginal ">
+      <div className="marginal">
         <h1 className="font-bold text-[#3c3a39] md:text-4xl text-3xl pt-1 mb-2">
           Business Highlights
         </h1>

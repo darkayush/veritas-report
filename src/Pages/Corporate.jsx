@@ -179,7 +179,7 @@ const Corporate = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pb-6">
           {Object.entries(directoryData.others).map(([category, items], i) => (
             <div key={i}>
-              <p className="font-semibold mb-2">{category}</p>
+              <p className="font-bold mb-2">{category}</p>
               <ul className="text-md text-gray-700">
                 {items.map((item, j) => (
                   <li key={j}>{item}</li>
